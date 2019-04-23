@@ -1,0 +1,22 @@
+////////////////////////////////////////////
+
+----会員登録用テーブル　テーブル名curacone_user
+CREATE TABLE curacone_user(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+    user_name VARCHAR(16) NOT NULL, 
+    user_mail VARCHAR(16) NOT NULL, 
+    password VARCHAR(256) NOT NULL, 
+    user_icon longtext, 
+    question VARCHAR(16) NOT NULL, 
+    answer VARCHAR(16) NOT NULL, 
+    deleted_at tinyint(1) DEFAULT 0, 
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
+    created_at DATETIME NOT NULL
+)ENGINE=INNODB;
+INSERT INTO curacone_user(
+    user_name,user_mail,password,created_at
+)VALUES
+('kenken','1234@gmail.com','1234',now());
+
+///////////////////////////////////////////////
+
