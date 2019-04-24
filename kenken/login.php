@@ -80,6 +80,8 @@ if(isset($_POST["login"])){
 <p><input type="password" name="user_password" value></p>
 <p><button type="sumbit" name="login">ログイン</button></p>
 <a href="forget.php">パスワード忘れた方こちら</a>
+<a href="new.php">新規登録</a>
+
 </form>
     
 </body>

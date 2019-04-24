@@ -14,9 +14,5 @@ $(function(){
 
         });
     });
-    // alertを押した後ログインページ行く
-    alert.on("click",function(){
-        console.log("aaaaaaaa");
-        $('body').css('backGround','#eeeeee');
-    });
+ 
 });

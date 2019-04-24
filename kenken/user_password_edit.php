@@ -4,18 +4,19 @@
 require_once __DIR__ . "/define.php";
 $errorMsg[]="";
 $errorFlg=false;
+
 session_start();
 if( isset($_SESSION["login"] ) && $_SESSION["login"]!=="" ){
     // ログインされた方のユーザーid
     $user = $_SESSION[ "login" ];
     $id=$user["id"];
-    print_r($id);
+    // print_r($id);
     if(isset($_POST["completed"])){
         $inputPassword=[
             "password" => filter_input( INPUT_POST, "password" ),
             "newpassword" => filter_input( INPUT_POST, "newpassword" ),
             "repassword" => filter_input( INPUT_POST, "repassword" )
-        ];
+        ]; 
         //未入力確認
         if( $inputPassword[ "password" ] === "" ){
             $errorMsg[]="パスワードを入力してください";
@@ -33,31 +34,33 @@ if( isset($_SESSION["login"] ) && $_SESSION["login"]!=="" ){
             $errorMsg[] = "パスワードには8文字以上・12文字以内で半角英数のみ使用できます。";
             $errorFlg = true;
         }
+
         $hashSalt=hash(HASH_ALG,HASH_SALT);
         $hashPassword = hash( HASH_ALG ,$inputPassword["password"].hash( HASH_ALG , HASH_SALT));
         if($hashPassword===$user["password"]){
-
-        }
-        else{
-            $errorMsg[]="パスワード間違いました";
-            $errorFlg=true;
+            
+            
+        }else{
+            $errorMsg[]="入力されたパスワード間違いました";
+            $errorFlg=true; 
         }
         if($inputPassword["newpassword"] === $inputPassword["repassword"]){
             $hashSalt=hash(HASH_ALG,HASH_SALT);
             $newhashPassword=hash(HASH_ALG,$inputPassword[ "newpassword" ] . $hashSalt);
-            
+  
         }
         else{
             $errorMsg[]="入力されたnewパスワードとパスワードの確認が同じではありません";
-            $errorFlg-true; 
+            $errorFlg=true; 
         }
-        if($instance=new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME )){
+        if(!$errorFlg){
+            $instance=new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME );
             $instance->set_charset("utf8");
             $sql="SELECT * FROM curacone_user where id=$id";
             if(!$r=$instance->query($sql)){
                 print $sql;
                 exit;
-            } 
+            }
             if($r->num_rows){
                 $sql="
                 UPDATE curacone_user SET 
@@ -71,16 +74,11 @@ if( isset($_SESSION["login"] ) && $_SESSION["login"]!=="" ){
     
             }
             $instance->close();
+            header("Location:url.php");  
         }
-        else{
-            print "データベースの接続に失敗しました";
-            header("Location:user_edit.php");
-            exit;      
-        }
-
 
     }
-    session_destroy();
+    
 }
 else{
     header("Location:login.php");
@@ -106,7 +104,10 @@ else{
         <p>newパスワード:<input type="password" name="newpassword" value="" maxlength='12'></p>
         <p>パスワード確認:<input type="password" name="repassword" value="" maxlength='12'></p>
         <button type="sumbit" name="completed">完成</button>
+        <a href="index.php">戻り</a>
         </form>   
 
+
 </body>
+
 </html>

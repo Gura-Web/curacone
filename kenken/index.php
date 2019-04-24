@@ -7,6 +7,8 @@ if( isset($_SESSION["login"] ) && $_SESSION["login"]!=="" ){
     // ログインされた方のユーザーid
     $user=$_SESSION[ "login" ];
     $id =$user["id"];
+    
+    
 
 }
 else{
@@ -25,7 +27,7 @@ else{
 </head>
 <body>
     <h1>indexページ</h1>
-    <a href="mypage.php?id=<?= $id ?>"><img src="<?= $user["user_icon"] ?>" alt=""></a>
+    <a href="mypage.php"><img src="<?= $user["user_icon"] ?>" alt=""></a>
     <p>こんにちは<?= $user["user_name"] ?></p>
     <a href="logout.php">ログアウト</a>
 </body>
