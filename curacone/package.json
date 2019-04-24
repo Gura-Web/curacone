@@ -1,0 +1,23 @@
+{
+  "name": "momokamiki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "momokamiki",
+  "license": "ISC",
+  "devDependencies": {
+    "es6-promise": "^4.2.4",
+    "gulp": "^4.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
+  }
+}
