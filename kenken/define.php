@@ -6,14 +6,8 @@
 //local
 define( "DB_HOST", "localhost" );
 define( "DB_USER", "root" );
-
-// ケンケンのローカル
 define( "DB_PASS", "699177" );
 define( "DB_NAME", "yanyan" );
-
-// 三木のローカル
-// define( "DB_PASS", "yururinpanda" );
-// define( "DB_NAME", "mmiki" );
 
 // click
 // define( "DB_HOST", "" );
