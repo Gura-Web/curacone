@@ -1,0 +1,104 @@
+// タイトル
+.title{
+  max-width: 68%;
+  margin: 0 auto;
+  position: relative;
+  background: url("../img/deco-search-bg.svg") no-repeat;
+    background-position: right 36px top 194px;
+  &__head{
+    padding-top: 166px;
+    font-size: 6rem;
+    font-family: $mplus;
+    line-height: 1;
+    span{
+      font-size: 2.2rem;
+      color: #fff;
+    }
+  }
+
+  
+  .work-search{
+    margin-top: 78px;
+    padding-bottom: 64px;
+    &__bar{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 62px;
+      padding: 20px 0 20px 26px;
+      border-radius: 2rem;
+      background-color: #fff;
+      input{
+        width: 70%;
+        margin-left: 20px;
+        font-size: 1.8rem;
+        font-family: $mplus;
+      }
+    }
+    &__img{
+      position: absolute;
+      top: 250px;
+      right: 97px;
+    }
+  }
+}
+
+// 作品リスト
+.workList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 68%;
+  margin: 0 auto;
+  .work{
+    width: 342px;
+    margin-bottom: 86px;
+    &__thumb img{
+      display: block;
+      width: 100%;
+      border-radius: 0.4rem;
+    }
+    &__title{
+      margin: 18px 0;
+      padding: 0 18px;
+      font-family: $mplus;
+      font-size: 1.6rem;
+    }
+    &__info{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 18px 0;
+      border-top: solid 1px $light;
+    }
+    .work-info__prof{
+      display: flex;
+      align-items: center;
+      span{
+        margin-left: 12px;
+        font-size: 1.2rem;
+        font-family: $mplus;
+        color: $gray;
+      }
+    }
+    .work-info__comment{
+      display: flex;
+      align-items: center;
+      color: $blue;
+      font-family: $arap;
+      font-size: 1.8rem;
+      &::before{
+        width: 20px;
+        height: 14px;
+        margin-right: 4px;
+        content: '';
+        display: block;
+        background: url("../img/icon-comment.svg") no-repeat;
+      }
+    }
+  }
+}
+@media (min-width: 1500px){
+  .workList .work__title{
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,15 @@
+// 個別につけるスタイル
+.modal-wrap{
+  width: calc(100% - 280px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: $light;
+}
+.modal{
+  &__thumb{
+    width: 800px;
+    margin: 0 auto;
+    border: solid 1px red;
+  }
+}
