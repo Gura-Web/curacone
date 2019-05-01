@@ -31,7 +31,7 @@ require( 'es6-promise' ).polyfill();
  * 
  */
 // 実行時の出力ファイルのパス指定
-var cssSrcPath = './src/sass';
+var cssSrcPath = './src/sass/**';
 var cssDestPath = './css';
 var jsSrcPath = './src/js';
 var jsDestPath = './js';

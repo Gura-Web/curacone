@@ -1,13 +1,15 @@
 
 // レスファイル
-@import "_ress";
+@import "base/_ress";
 // 変数ファイル
-@import "_variable";
+@import "base/_variable";
 // 共通ファイル
-@import "_base";
+@import "base/_base";
 // メニュー・メイン・フッター
-@import "_layout";
+@import "layout/_layout";
 // ボタン・アイコン等
-@import "_parts";
+@import "layout/_parts";
 // 何回か使われるスタイル
-@import "_multiple";
+@import "layout/_multiple";
+// 個別にそれだけに使うスタイル
+@import "layout/_Individual";
