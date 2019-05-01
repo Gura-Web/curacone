@@ -1,122 +1,144 @@
+'use strict';
+/**
+ * 
+ * gulp v4
+ *  
+ */
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var browserSync = require("browser-sync");
-var autoprefixer = require("gulp-autoprefixer");
-var concat = require("gulp-concat");
-var sourcemaps = require("gulp-sourcemaps");
-var plumber = require('gulp-plumber');
-var notify = require("gulp-notify");
-var uglify = require("gulp-uglify");
-var connect = require("gulp-connect-php");
-// var cleanCSS = require('gulp-clean-css');
+/**
+ * 
+ * 外部ファイル読み込み
+ * 
+ */
+// gulp
+var gulp = require( 'gulp' );
+// sassの実行ファイル
+var sass = require( 'gulp-sass' );
+// エラー時のデスクトップ通知機能
+var notify = require( 'gulp-notify' );
+// エラー時の強制終了防止
+var plumber = require( 'gulp-plumber' );
+// ソースマップ作成
+var sourcemaps = require( 'gulp-sourcemaps' );
+// ベンダープレフィックス
+var pleeease = require( 'gulp-pleeease' );
+// es6
+require( 'es6-promise' ).polyfill();
+
+/**
+ * 
+ * 設定関係
+ * 
+ */
+// 実行時の出力ファイルのパス指定
+var cssSrcPath = './src/sass';
+var cssDestPath = './css';
+var jsSrcPath = './src/js';
+var jsDestPath = './js';
+// タスク名
+var task = {
+  sass: 'sass',
+  js: 'js',
+  watch: 'watch'
+};
+
+/**
+ * 
+ * タスク関係
+ * gulp v4からtaskはコールバックを渡してやらないと実行が完了しなくなっている
+ * 
+ */
+// sass
+gulp.task( 
+  task.sass,
+  function(done){
+    showLog('task : sass');
+    gulp
+      .src( cssSrcPath + '/*.scss' )
+      // ファイル内のエラー検索
+      .pipe(
+        plumber(
+          {
+            errorHandler: notify.onError( 'Error: <%= error.message %>' )
+          }
+        )
+      )
+      // ファイルの圧縮
+      .pipe(
+        sass(
+          {
+            outputStyle: 'expanded',
+            compass: true
+          }
+        )
+        .on( 'error', sass.logError )
+      )
+      // ソースマップの生成
+      .pipe(
+        sourcemaps.write()
+      )
+      // ベンダープレフィックスの生成
+      .pipe(
+        pleeease(
+          {
+            autoprefixer: { 'browsers': ['last 2 versions'] },
+            minifier: false
+          }
+        )
+      )
+      // sassファイルの書き出し
+      .pipe( gulp.dest( cssDestPath ) );
+  done();
+  }
+);
 
 
-gulp.task("server", function () {
-    connect.server({
-        port: 8001,
-        base: "./"
-    }, function () {
-        browserSync.init({
-            proxy: "localhost:8001"
-            // server: {
-            //     baseDir: "./"
-            // }
-        });
-    })
+//
+// JavaScriptファイルのtaskを設定
+//
+gulp.task(
+  task.js,
+  function(done){
+    showLog( 'task : js' );
+    gulp
+      .src( jsSrcPath + '/*.js' )
+      .pipe( gulp . dest( jsDestPath ) );
+    done();
 });
-gulp.task("watch", function() {
-    gulp.watch("src/js/*.js", function () {
-        gulp.src("src/js/*.js")
-            .pipe(concat("script.js"))
-            .pipe(gulp.dest("js/"));
-    });
-    gulp.watch("src/sass/**/*.scss", function () {
-        gulp.src("src/sass/**/*.scss")
-            .pipe(plumber({
-                errorHandler: notify.onError('Error:<% error.message %>')
-            }))
-            .pipe(sourcemaps.init())
-            .pipe(sass())
-            .pipe(autoprefixer({
-                browsers: ['last 2 versions'],
-                grid:true
-            }))
-            // .pipe(cleanCSS())
-            .pipe(sourcemaps.write())
-            .pipe(gulp.dest("css/"))
-        browserSync.reload();
-    });
+
+
+//
+// sassファイルのwatchを設定
+//
+gulp.task(
+  task.watch,
+  function(){
+    showLog( 'task : watch' );
+    var target = [
+      cssSrcPath + '/*.scss',
+      jsSrcPath + '/*.js'
+    ];
     
-});
+    gulp.watch(
+      target,
+      gulp.parallel(task.sass)
+    );
+  }
+);
 
 
-gulp.task("default",["server","watch"]);
+// gulpタスクの実行
+gulp.task(
+  'default',
+  gulp.series( gulp.parallel( task.sass, task.js ))
+);
 
 
 
-gulp.task("copy", function() {
-    gulp.src("*.html")
-    .pipe(gulp.dest("web"))
-    gulp.src("*.php")
-    .pipe(gulp.dest("web"))
-    gulp.src("include_php/*.php")
-    .pipe(gulp.dest("web/include_php"))
-    gulp.src("css/*.css")
-    .pipe(gulp.dest("web/css"))
-    gulp.src("js/*.js")
-    .pipe(gulp.dest("web/js"));
-});
-
-gulp.task("concat", function() {
-    gulp.src(["src/js/*.js", "!src/js/script.js"]) // 操作の対象にしたくないものは ! を先頭に書く
-    .pipe(concat("script.js")) 
-    .pipe(gulp.dest("js/"));
-});
-
-gulp.task("js", function() {
-    gulp.src('src/js/*.js')
-    .pipe(gulp.dest('js'));
-})
-
-
-// 画像圧縮
-var changed = require('gulp-changed');
-var imagemin = require('gulp-imagemin');
-var imageminJpg = require('imagemin-jpeg-recompress');
-var imageminPng = require('imagemin-pngquant');
-var imageminGif = require('imagemin-gifsicle');
-var svgmin = require('gulp-svgmin');
-
-var paths = {
-    srcDir: 'img/**/',
-    dstDir: 'img_dest/'
+// コンソール関数
+function showLog( message ) {
+  console.log( '# ----------------------------------- #' );
+  console.log( `#    ${message}` );
+  console.log( '# ----------------------------------- #' );
+  
 }
-
-// jpg png gif画像の圧縮
-gulp.task('imagemin', function() {
-    var srcGlob = paths.srcDir + "/**/*.+(jpg|jpeg|png|gif)";
-    var dstGlob = paths.dstDir;
-    gulp.src( srcGlob )
-    .pipe(changed(dstGlob))
-    .pipe(imagemin([
-        imageminPng(),
-        imageminJpg(),
-        imageminGif({
-            interlaced: false,
-            optimizationLevel: 3,
-            colors: 180
-        })
-    ]))
-    .pipe(gulp.dest(dstGlob));
-});
-
-// svg画像の圧縮
-gulp.task('svgmin', function () {
-    var srcGlob = paths.srcDir + "/**/*.+(svg)";
-    var dstGlob = paths.dstDir;
-    gulp.src(srcGlob)
-        .pipe(changed(dstGlob))
-        .pipe(svgmin())
-        .pipe(gulp.dest(dstGlob));
-});
