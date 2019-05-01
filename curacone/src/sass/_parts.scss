@@ -1,0 +1,97 @@
+// 部品 ( アイコン・ボタン )
+.icon{
+  img{
+    border: solid 3px $thin;
+    border-radius: 1.8rem;
+  }
+}
+
+.icon-mini{
+  width: 24px;
+  height: 24px;
+  img{
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+}
+
+.btn{
+  border-radius: 2rem;
+  text-align: center;
+  font-family: $mplus;
+  &--blue{
+    background: $blue;
+  }
+  &--yellow{
+    background: $yellow;
+  }
+}
+
+// view moreボタン
+.btn-view{
+  display: block;
+  margin: 0 auto 100px;
+  padding: 16px 120px;
+  background: $thin;
+  color: $blue;
+  position: relative;
+  font-family: $arap;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  &::before,&::after{
+    display: block;
+    content: '';
+    width: 10px;
+    height: 2px;
+    border-radius: 1rem;
+    background: $blue;
+    position: absolute;
+    right: 100px;
+    top: 54%;
+  }
+  &::before{
+    transform: rotate(45deg);
+  }
+  &::after{
+    right: 94px;
+    transform: rotate(-45deg);
+  }
+}
+
+//  作品追加ボタン
+.btn-add{
+  position: fixed;
+  right: 110px;
+  bottom: 110px;
+  text-align: center;
+  &__deco{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 116px;
+    height: 116px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: $blue;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    span{
+      display: block;
+      width: 58px;
+      height: 4px;
+      background: #fff;
+      position: absolute;
+      &:last-child{
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__txt{
+    display: block;
+    margin-top: 14px;
+    font-size: 2rem;
+    color: $blue;
+    font-family: $mplus;
+  }
+}
+

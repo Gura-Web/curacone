@@ -371,6 +371,385 @@ video {
   text-shadow: none;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   background: #fafafa;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+* {
+  color: #414141;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.menu {
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  box-shadow: 3px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu .logo {
+  margin: 60px 0 80px;
+  text-align: center;
+}
+
+.menu .login,
+.menu .guest {
+  width: 100%;
+  height: 90px;
+  font-family: "M PLUS 1p", sans-selif;
+}
+
+.menu .login__icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-top: 10px;
+}
+
+.menu .login__prof {
+  margin-left: 14px;
+  text-align: right;
+}
+
+.menu .login__prof p {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.menu .login__prof span {
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #BCBCBC;
+}
+
+.menu .guest {
+  text-align: center;
+}
+
+.menu .guest .btn {
+  margin-bottom: 10px;
+  padding: 8px 66px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.menu__glnav {
+  margin-top: 66px;
+}
+
+.menu__glnav .menu-glnav__list a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 100%;
+  padding: 28px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "Asap", sans-serif;
+}
+
+.menu__glnav .menu-glnav__list a span {
+  width: 66px;
+  margin-left: 22px;
+  text-align: center;
+}
+
+.menu__logout {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+  color: #BCBCBC;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.menu__logout img {
+  margin-right: 8px;
+}
+
+main {
+  width: calc(100% - 280px);
+  margin-left: 280px;
+}
+
+.deco {
+  background: url("../img/bg.svg") no-repeat -200px -230px;
+}
+
+.foot {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  background: #5082F4;
+  color: #fff;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 40px;
+  font-family: "Asap", sans-serif;
+  text-align: center;
+}
+
+.icon img {
+  border: solid 3px #e8e8e8;
+  border-radius: 1.8rem;
+}
+
+.icon-mini {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-mini img {
+  width: 100%;
+  border-radius: 0.4rem;
+}
+
+.btn {
+  border-radius: 2rem;
+  text-align: center;
+  font-family: "M PLUS 1p", sans-selif;
+}
+
+.btn--blue {
+  background: #5082F4;
+}
+
+.btn--yellow {
+  background: #FFE000;
+}
+
+.btn-view {
+  display: block;
+  margin: 0 auto 100px;
+  padding: 16px 120px;
+  background: #e8e8e8;
+  color: #5082F4;
+  position: relative;
+  font-family: "Asap", sans-serif;
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 3rem;
+}
+
+.btn-view:before, .btn-view:after {
+  display: block;
+  content: '';
+  width: 10px;
+  height: 2px;
+  border-radius: 1rem;
+  background: #5082F4;
+  position: absolute;
+  right: 100px;
+  top: 54%;
+}
+
+.btn-view:before {
+  transform: rotate(45deg);
+}
+
+.btn-view:after {
+  right: 94px;
+  transform: rotate(-45deg);
+}
+
+.btn-add {
+  position: fixed;
+  right: 110px;
+  bottom: 110px;
+  text-align: center;
+}
+
+.btn-add__deco {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 116px;
+  height: 116px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #5082F4;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-add__deco span {
+  display: block;
+  width: 58px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+}
+
+.btn-add__deco span:last-child {
+  transform: rotate(90deg);
+}
+
+.btn-add__txt {
+  display: block;
+  margin-top: 14px;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #5082F4;
+  font-family: "M PLUS 1p", sans-selif;
+}
+
+.title {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  background: url("../img/deco-search-bg.svg") no-repeat;
+  background-position: right 36px top 194px;
+}
+
+.title__head {
+  padding-top: 166px;
+  font-size: 60px;
+  font-size: 6rem;
+  font-family: "M PLUS 1p", sans-selif;
+  line-height: 1;
+}
+
+.title__head span {
+  font-size: 22px;
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.title .work-search {
+  margin-top: 78px;
+  padding-bottom: 64px;
+}
+
+.title .work-search__bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  height: 62px;
+  padding: 20px 0 20px 26px;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+
+.title .work-search__bar input {
+  width: 70%;
+  margin-left: 20px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "M PLUS 1p", sans-selif;
+}
+
+.title .work-search__img {
+  position: absolute;
+  top: 250px;
+  right: 97px;
+}
+
+.workList {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.workList .work {
+  width: 342px;
+  margin-bottom: 86px;
+}
+
+.workList .work__thumb img {
+  border-radius: 0.4rem;
+}
+
+.workList .work__title {
+  margin: 18px 0;
+  padding: 0 18px;
+  font-family: "M PLUS 1p", sans-selif;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+.workList .work__info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 10px 18px 0;
+  border-top: solid 1px #BCBCBC;
+}
+
+.workList .work .work-info__prof {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.workList .work .work-info__prof span {
+  margin-left: 12px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: "M PLUS 1p", sans-selif;
+  color: #9A9A9A;
+}
+
+.workList .work .work-info__comment {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #5082F4;
+  font-family: "Asap", sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.workList .work .work-info__comment:before {
+  width: 20px;
+  height: 14px;
+  margin-right: 4px;
+  content: '';
+  display: block;
+  background: url("../img/icon-comment.svg") no-repeat;
 }
