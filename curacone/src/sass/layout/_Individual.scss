@@ -1,15 +1,166 @@
 // 個別につけるスタイル
 .modal-wrap{
   width: calc(100% - 280px);
-  height: 100%;
+  padding: 100px 0;
   position: absolute;
   top: 0;
   background: $light;
 }
 .modal{
+  width: 60%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.6rem;
   &__thumb{
-    width: 800px;
-    margin: 0 auto;
-    border: solid 1px red;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  &__info{
+    display: flex;
+    margin: 60px 0 70px 0;
+    .work{
+      width: 50%;
+      margin: 0 4% 0 8%;
+      &__title{
+        margin-bottom: 12px;
+        font-size: 2.8rem;
+        font-family: $mplus;
+        font-weight: bold;
+      }
+      &__url a{
+        font-size: 1.4rem;
+        font-family: $asap;
+        color: $blue;
+      }
+      &__text{
+        margin-top: 30px;
+        font-size: 1.6rem;
+        font-family: $mplus;
+        color: $gray;
+      }
+    }
+    .creator{
+      width: 50%;
+      height: 100%;
+      margin-top: 34px;
+      padding: 0 4%;
+      border-left: solid 1px $thin;
+      .creator-in{
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        &__title{
+        padding: 24px 0 32px;
+        span{
+          font-family: $mplus;
+          font-size: 1.2rem;
+          color: $yellow;
+        }
+        p{
+          font-family: $asap;
+          font-size: 3.2rem;
+          color: $yellow;
+          font-weight: bold;
+          font-style: italic;
+          line-height: 1;
+        }
+      }
+      &__prof{
+        font-family: $mplus;
+        font-size: 1.4rem;
+        .prof__name{
+          margin: 12px 0 20px;
+          font-weight: bold;
+        }
+        .prof__text{
+          width: 80%;
+          margin: 0 auto;
+          color: $gray;
+        }
+      }
+      &__btn{
+        width: 80%;
+        margin: 40px auto 20px;
+        padding: 10px 0;
+        font-size: 1.6rem;
+        color: #fff;
+        text-align: center;
+      }
+      }
+    }
+  }
+  &__comment{
+    margin: 0 20% 0 10%;
+    font-family: $mplus;
+    h4{
+      margin-bottom: 36px;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+    .comment{
+      &__list{
+        margin-bottom: 30px;
+        padding-bottom: 34px;
+        border-bottom: solid 1px $thin;
+        font-size: 1.6rem;
+        .comment-list__icon{
+          height: 40px;
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          img{
+            height: 100%;
+          }
+          span{
+            margin-left: 14px;
+          }
+        }
+        .comment-list__text{
+          margin: 8px 0 0 20px;
+          color: $gray;
+        }
+      }
+    }
+    .comment-submit{
+      padding-bottom: 34px;
+        &__title{
+          margin-bottom: 16px;
+          font-family: $mplus;
+          font-weight: bold;
+          font-size: 1.8rem;
+        }
+        &__bar{
+          display: flex;
+          align-items: center;
+          padding: 10px 14px;
+          border: solid 1px $thin;
+          border-radius: 0.5rem;
+          font-size: 1.6rem;
+          input{
+            width: 100%;
+            margin-left: 28px;
+          }
+          img{
+            width: 40px;
+          }
+        }
+      }
+  }
+}
+.reply{
+  margin: 36px 0 0 68px;
+  &__list{
+    position: relative;
+    &::before{
+      display: block;
+      width: 30px;
+      height: 28px;
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -44px;
+      background-image: url("../img/icon-reply.svg");
+    }
   }
 }

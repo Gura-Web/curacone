@@ -35,7 +35,7 @@
   background: $thin;
   color: $blue;
   position: relative;
-  font-family: $arap;
+  font-family: $asap;
   font-size: 2.2rem;
   font-weight: bold;
   border-radius: 3rem;
@@ -95,3 +95,25 @@
   }
 }
 
+// モーダル削除ボタン
+.btn-modal-close{
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  &::before,
+  &::after{
+    display: block;
+    content: '';
+    width: 40px;
+    height: 4px;
+    border-radius: 2rem;
+    background: #fff;
+    position: absolute;
+  }
+  &:before{
+    transform: rotate(45deg);
+  }
+  &:after{
+    transform: rotate(-45deg);
+  }
+}

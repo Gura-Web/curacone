@@ -629,6 +629,30 @@ main {
   font-family: "M PLUS 1p", sans-selif;
 }
 
+.btn-modal-close {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+}
+
+.btn-modal-close:before, .btn-modal-close:after {
+  display: block;
+  content: '';
+  width: 40px;
+  height: 4px;
+  border-radius: 2rem;
+  background: #fff;
+  position: absolute;
+}
+
+.btn-modal-close:before {
+  transform: rotate(45deg);
+}
+
+.btn-modal-close:after {
+  transform: rotate(-45deg);
+}
+
 .title {
   max-width: 68%;
   margin: 0 auto;
@@ -694,7 +718,7 @@ main {
 }
 
 .workList .work {
-  width: 342px;
+  width: 30%;
   margin-bottom: 86px;
 }
 
@@ -764,14 +788,212 @@ main {
 
 .modal-wrap {
   width: calc(100% - 280px);
-  height: 100%;
+  padding: 100px 0;
   position: absolute;
   top: 0;
   background: #BCBCBC;
 }
 
-.modal__thumb {
-  width: 800px;
+.modal {
+  width: 60%;
   margin: 0 auto;
-  border: solid 1px red;
+  background: #fff;
+  border-radius: 0.6rem;
+}
+
+.modal__thumb {
+  width: 100%;
+}
+
+.modal__thumb img {
+  width: 100%;
+}
+
+.modal__info {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 60px 0 70px 0;
+}
+
+.modal__info .work {
+  width: 50%;
+  margin: 0 4% 0 8%;
+}
+
+.modal__info .work__title {
+  margin-bottom: 12px;
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-family: "M PLUS 1p", sans-selif;
+  font-weight: bold;
+}
+
+.modal__info .work__url a {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "Asap", sans-serif;
+  color: #5082F4;
+}
+
+.modal__info .work__text {
+  margin-top: 30px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "M PLUS 1p", sans-selif;
+  color: #9A9A9A;
+}
+
+.modal__info .creator {
+  width: 50%;
+  height: 100%;
+  margin-top: 34px;
+  padding: 0 4%;
+  border-left: solid 1px #e8e8e8;
+}
+
+.modal__info .creator .creator-in {
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal__info .creator .creator-in__title {
+  padding: 24px 0 32px;
+}
+
+.modal__info .creator .creator-in__title span {
+  font-family: "M PLUS 1p", sans-selif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #FFE000;
+}
+
+.modal__info .creator .creator-in__title p {
+  font-family: "Asap", sans-serif;
+  font-size: 32px;
+  font-size: 3.2rem;
+  color: #FFE000;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1;
+}
+
+.modal__info .creator .creator-in__prof {
+  font-family: "M PLUS 1p", sans-selif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.modal__info .creator .creator-in__prof .prof__name {
+  margin: 12px 0 20px;
+  font-weight: bold;
+}
+
+.modal__info .creator .creator-in__prof .prof__text {
+  width: 80%;
+  margin: 0 auto;
+  color: #9A9A9A;
+}
+
+.modal__info .creator .creator-in__btn {
+  width: 80%;
+  margin: 40px auto 20px;
+  padding: 10px 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+}
+
+.modal__comment {
+  margin: 0 20% 0 10%;
+  font-family: "M PLUS 1p", sans-selif;
+}
+
+.modal__comment h4 {
+  margin-bottom: 36px;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.modal__comment .comment__list {
+  margin-bottom: 30px;
+  padding-bottom: 34px;
+  border-bottom: solid 1px #e8e8e8;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.modal__comment .comment__list .comment-list__icon {
+  height: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  font-weight: bold;
+}
+
+.modal__comment .comment__list .comment-list__icon img {
+  height: 100%;
+}
+
+.modal__comment .comment__list .comment-list__icon span {
+  margin-left: 14px;
+}
+
+.modal__comment .comment__list .comment-list__text {
+  margin: 8px 0 0 20px;
+  color: #9A9A9A;
+}
+
+.modal__comment .comment-submit {
+  padding-bottom: 34px;
+}
+
+.modal__comment .comment-submit__title {
+  margin-bottom: 16px;
+  font-family: "M PLUS 1p", sans-selif;
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.modal__comment .comment-submit__bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 10px 14px;
+  border: solid 1px #e8e8e8;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.modal__comment .comment-submit__bar input {
+  width: 100%;
+  margin-left: 28px;
+}
+
+.modal__comment .comment-submit__bar img {
+  width: 40px;
+}
+
+.reply {
+  margin: 36px 0 0 68px;
+}
+
+.reply__list {
+  position: relative;
+}
+
+.reply__list:before {
+  display: block;
+  width: 30px;
+  height: 28px;
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -44px;
+  background-image: url("../img/icon-reply.svg");
 }
