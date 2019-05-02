@@ -6,8 +6,20 @@ html,body{
 html{
   font-size: 62.5%;
 }
+// 編集画面
 body{
    background: $bg;
+   overflow: hidden;
+   &::before{
+    
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: rgba(255,255,255,0.7);
+  }
 }
 
 a{

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="ページの説明">
-  <title>Cura&nbsp;Cone｜作品一覧</title>
+  <title>Cura&nbsp;Cone｜Mypage</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
@@ -17,7 +17,7 @@
       <h1 class="logo"><a href="index.html"><img src="img/logo.png" alt="CuraCone"></a></h1>
 
       <!-- ログイン済み -->
-      <!-- <div class="login">
+      <div class="login">
         <a href="mypage.html" class="login__icon">
           <p class="icon"><img src="img/icon-sample.png" alt="自分のプロフィールアイコン"></p>
           <div class="login__prof">
@@ -25,23 +25,23 @@
             <span>ログイン中</span>
           </div>
         </a>
-      </div> -->
+      </div>
 
       <!-- ログインしてない -->
-      <div class="guest">
+      <!-- <div class="guest">
         <button class="btn btn--blue">ログイン</button>
         <button class="btn btn--yellow">会員登録</button>
-      </div>
+      </div> -->
 
       <nav class="menu__glnav">
         <ul>
-          <li class="menu-glnav__list on">
+          <li class="menu-glnav__list">
             <a href="index.php">
               <?php include("read/icon-home.html"); ?>
               <span>HOME</span>
             </a>
           </li>
-          <li class="menu-glnav__list">
+          <li class="menu-glnav__list on">
             <a href="mypage.php">
               <?php include("read/icon-mypage.html"); ?>
               <span>MyPage</span>
@@ -67,15 +67,24 @@
       </button>
     </div><!-- .side -->
 
-    <main class="deco">
-      <div class="title">
-        <h2 class="title__head"><span>みんなの作品</span><br>All&nbsp;Works</h2>
-        <div class="work-search">
-          <p class="work-search__bar">
-            <img src="img/icon-search.svg" alt="">
-            <input type="text" placeholder="検索したいキーワードを入力"></p>
-          <img class="work-search__img" src="img/deco-search.svg" alt="">
-      </div>
+    <main>
+      <div class="profile-wrap">
+        <div class="profile">
+          <div class="prof-info edit">
+            <p class="prof-info__icon"><img src="img/icon-prof.png" alt=""></p>
+            <div>
+              <p class="prof-info__name">三木 ケンケン</p>
+              <p class="prof-info__text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+            </div>
+          </div>
+          <div class="prof-edit">
+            <button class="btn prof-edit__btn btn-edit"><img src="img/icon-edit.svg" alt="">プロフィールを編集</button>
+            <div class="edit">
+              <button class="btn prof-edit__btn btn-cancel">キャンセル</button>
+              <button class="btn prof-edit__btn btn-preser btn--blue">変更を保存</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- <div class="modal-wrap">
@@ -130,9 +139,14 @@
           </div>
         </div>
       </div> -->
+      <div class="mypage-head">
+        <h2 class="mypage-head__title">あなたの作品集</h2>
+        <button class="btn-delete mypage-head__btn">作品を削除</button>
+      </div>
       
       <ul class="workList">
         <li class="work">
+          <button class="work__btn btn-erasure"></button>
           <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
           <h3 class="work__title">タイポグラフィアートの作品</h3>
           <div class="work__info">
@@ -144,6 +158,7 @@
           </div>
         </li>
         <li class="work">
+          <button class="work__btn btn-erasure"></button>
           <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
           <h3 class="work__title">タイポグラフィアートの作品</h3>
           <div class="work__info">
@@ -155,6 +170,7 @@
           </div>
         </li>
         <li class="work">
+          <button class="work__btn btn-erasure"></button>
           <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
           <h3 class="work__title">タイポグラフィアートの作品</h3>
           <div class="work__info">
@@ -166,6 +182,7 @@
           </div>
         </li>
         <li class="work">
+          <button class="work__btn btn-erasure"></button>
           <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
           <h3 class="work__title">タイポグラフィアートの作品</h3>
           <div class="work__info">
@@ -177,6 +194,7 @@
           </div>
         </li>
         <li class="work">
+          <button class="work__btn btn-erasure"></button>
           <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
           <h3 class="work__title">タイポグラフィアートの作品</h3>
           <div class="work__info">
@@ -188,6 +206,7 @@
           </div>
         </li>
         <li class="work">
+          <button class="work__btn btn-erasure"></button>
           <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
           <h3 class="work__title">タイポグラフィアートの作品</h3>
           <div class="work__info">

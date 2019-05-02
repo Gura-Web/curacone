@@ -382,6 +382,17 @@ html {
 
 body {
   background: #fafafa;
+  overflow: hidden;
+}
+
+body:before {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 a {
@@ -481,6 +492,18 @@ img {
   text-align: center;
 }
 
+.menu__glnav .menu-glnav__list a:hover {
+  background: #e8e8e8;
+}
+
+.menu__glnav .menu-glnav__list a:hover span {
+  color: #5082F4;
+}
+
+.menu__glnav .menu-glnav__list a:hover svg {
+  fill: #5082F4;
+}
+
 .menu__logout {
   display: -ms-flexbox;
   display: flex;
@@ -497,6 +520,18 @@ img {
 
 .menu__logout img {
   margin-right: 8px;
+}
+
+.menu-glnav__list.on {
+  background: #e8e8e8;
+}
+
+.menu-glnav__list.on span {
+  color: #5082F4;
+}
+
+.menu-glnav__list.on svg {
+  fill: #5082F4;
 }
 
 main {
@@ -545,10 +580,12 @@ main {
 
 .btn--blue {
   background: #5082F4;
+  color: #fff;
 }
 
 .btn--yellow {
   background: #FFE000;
+  color: #fff;
 }
 
 .btn-view {
@@ -653,6 +690,74 @@ main {
   transform: rotate(-45deg);
 }
 
+.btn-edit {
+  width: 200px;
+  margin-bottom: 10px;
+  background: #e8e8e8;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.btn-edit img {
+  margin-right: 4px;
+}
+
+.btn-cancel {
+  border: solid 1px #414141;
+}
+
+.btn-preser {
+  border: solid 1px #5082F4;
+}
+
+.btn-cancel, .btn-preser {
+  width: 150px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-delete {
+  width: 130px;
+  background: #F45050;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-family: "M PLUS 1p", sans-selif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.btn-erasure {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 1rem;
+  background: #F45050;
+}
+
+.btn-erasure:before, .btn-erasure:after {
+  display: block;
+  content: '';
+  width: 26px;
+  height: 4px;
+  border-radius: 2rem;
+  background: #fff;
+  position: absolute;
+}
+
+.btn-erasure:before {
+  transform: rotate(45deg);
+}
+
+.btn-erasure:after {
+  transform: rotate(-45deg);
+}
+
 .title {
   max-width: 68%;
   margin: 0 auto;
@@ -720,6 +825,7 @@ main {
 .workList .work {
   width: 30%;
   margin-bottom: 86px;
+  position: relative;
 }
 
 .workList .work__thumb img {
@@ -743,6 +849,12 @@ main {
       justify-content: space-between;
   padding: 10px 18px 0;
   border-top: solid 1px #BCBCBC;
+}
+
+.workList .work__btn {
+  position: absolute;
+  right: -14px;
+  top: -14px;
 }
 
 .workList .work .work-info__prof {
@@ -996,4 +1108,121 @@ main {
   top: -6px;
   left: -44px;
   background-image: url("../img/icon-reply.svg");
+}
+
+.profile-wrap {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: #d1d1d1;
+  background-image: url("../img/bg.svg");
+  background-repeat: no-repeat;
+  background-size: 720px;
+  background-position: right -190px top -300px;
+}
+
+.profile-wrap:before {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.profile-wrap .profile {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  -ms-flex-align: center;
+      align-items: center;
+  max-width: 68%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile-wrap .profile .prof-info {
+  display: -ms-flexbox;
+  display: flex;
+  width: 54%;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: "M PLUS 1p", sans-selif;
+}
+
+.profile-wrap .profile .prof-info div {
+  padding: 4px 10px;
+}
+
+.profile-wrap .profile .prof-info__icon {
+  min-width: 110px;
+  margin-right: 16px;
+}
+
+.profile-wrap .profile .prof-info__icon img {
+  width: 100%;
+}
+
+.profile-wrap .profile .prof-info__name {
+  padding: 2px 10px;
+  margin-bottom: 4px;
+  font-size: 26px;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.profile-wrap .profile .prof-info__text {
+  padding: 2px 10px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.profile-wrap .profile .prof-edit {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+.profile-wrap .profile .prof-edit__btn {
+  padding: 7px 0;
+  text-align: center;
+}
+
+.edit {
+  z-index: 10;
+}
+
+.edit div {
+  background: #E6F3FE;
+}
+
+.edit div p {
+  display: inline-block;
+  background: #fff;
+  border: solid 1px #B2DCFF;
+  border-radius: 0.3rem;
+}
+
+.mypage-head {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  max-width: 68%;
+  margin: 86px auto 42px;
+}
+
+.mypage-head__title {
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #5082F4;
+  font-family: "M PLUS 1p", sans-selif;
 }

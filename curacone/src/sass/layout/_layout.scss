@@ -57,6 +57,15 @@
         margin-left: 22px;
         text-align: center;
       }
+      &:hover{
+        background: $thin;
+        span{
+          color: $blue;
+        }
+        svg{
+          fill: $blue
+        }
+      }
     }
   }
   &__logout{
@@ -71,6 +80,15 @@
     img{
       margin-right: 8px;
     }
+  }
+}
+.menu-glnav__list.on{
+  background: $thin;
+  span{
+    color: $blue;
+  }
+  svg{
+    fill: $blue
   }
 }
 
