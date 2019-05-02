@@ -1,10 +1,12 @@
 // タイトル
+.title.bg{
+  background: url("../img/deco-search-bg.svg") no-repeat;
+    background-position: right 36px top 194px;
+}
 .title{
   max-width: 68%;
   margin: 0 auto;
   position: relative;
-  background: url("../img/deco-search-bg.svg") no-repeat;
-    background-position: right 36px top 194px;
   &__head{
     padding-top: 166px;
     font-size: 6rem;

@@ -219,13 +219,15 @@
         </li>
       </ul>
       <button class="btn btn-view">viermore</button>
-      <button class="btn-add">
-        <div class="btn-add__deco">
-          <span></span>
-          <span></span>
-        </div>
-        <span class="btn-add__txt">作品を投稿する</span>
-      </button>
+      <div class="btn-add">
+        <a href="post.php">
+          <div class="btn-add__deco">
+            <span></span>
+            <span></span>
+          </div>
+          <span class="btn-add__txt">作品を投稿する</span>
+        </a>
+      </div>
     </main>
   <footer class="foot">
     &copy; 2019 curacone.

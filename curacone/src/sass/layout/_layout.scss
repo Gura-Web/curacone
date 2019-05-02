@@ -98,7 +98,13 @@ main{
   margin-left: 280px;
 }
 .deco{
-  background: url("../img/bg.svg") no-repeat -230px -190px;
+  background: url("../img/bg.svg") no-repeat -160px -190px;
+}
+.post{
+  overflow-x: hidden;
+  &__deco{
+    margin-top: 200px;
+  }
 }
 
 // フッター

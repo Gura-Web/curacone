@@ -68,7 +68,7 @@
     </div><!-- .side -->
 
     <main class="deco">
-      <div class="title">
+      <div class="title bg">
         <h2 class="title__head"><span>みんなの作品</span><br>All&nbsp;Works</h2>
         <div class="work-search">
           <p class="work-search__bar">
@@ -77,6 +77,8 @@
           <img class="work-search__img" src="img/deco-search.svg" alt="">
       </div>
       </div>
+
+      
 
       <!-- <div class="modal-wrap">
         <button class="btn-modal-close"></button>
@@ -200,13 +202,15 @@
         </li>
       </ul>
       <button class="btn btn-view">viermore</button>
-      <button class="btn-add">
-        <div class="btn-add__deco">
-          <span></span>
-          <span></span>
-        </div>
-        <span class="btn-add__txt">作品を投稿する</span>
-      </button>
+      <div class="btn-add">
+        <a href="post.php">
+          <div class="btn-add__deco">
+            <span></span>
+            <span></span>
+          </div>
+          <span class="btn-add__txt">作品を投稿する</span>
+        </a>
+      </div>
     </main>
   <footer class="foot">
     &copy; 2019 curacone.

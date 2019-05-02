@@ -233,6 +233,7 @@
   }
 }
 .edit{
+  display: flex;
   z-index: 10;
   div{
     background: #E6F3FE;
@@ -255,5 +256,85 @@
     font-weight: bold;
     color: $blue;
     font-family: $mplus;
+  }
+}
+
+//  投稿ページ
+.post-inner{
+  display: flex;
+  justify-content: space-between;
+  max-width: 68%;
+  margin: 0 auto;
+}
+.post-form{
+  margin: 140px 0 70px;
+  font-family: $mplus;
+  font-size: 1.6rem;
+  &__head{
+    margin: 30px 0 8px;
+    span{
+      color: $red;
+    }
+  }
+  &__column{
+    width: 460px;
+    border: solid 1px $light;
+    background: #F7F7F7;
+    border-radius: 0.3rem;
+  }
+  &__btn{
+    display: block;
+    margin: 0 auto;
+  }
+}
+.form-item{
+  margin-bottom: 40px;
+  &__name,&__url{
+    +dd{
+      padding: 10px 16px;
+    }
+  }
+  &__img{
+    +dd{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 550px;
+      height: 146px;
+      border : none;
+      font-size: 1.4rem;
+      .img-area{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        padding: 10px;
+        border: dotted 4px $light;
+        color: $light;
+        text-align: center;
+        &__select{
+          input{
+            display: none;
+          }
+          label{
+            display: block;
+            width: 126px;
+            margin: 14px auto 0;
+            padding: 4px 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            background: $gray;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &__text{
+    +dd{
+      width: 560px;
+      padding: 14px 16px;
+    }
   }
 }
