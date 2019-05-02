@@ -67,13 +67,28 @@
       </button>
     </div><!-- .side -->
 
-    <main class="deco all"><!-- .all今だけ -->  
+    <main class="deco">
       <div class="title">
         <h2 class="title__head"><span>お問い合わせ</span><br>Contact&nbsp;us</h2>
       </div>
 
-      <div class="post-inner">
-        
+      <div class="contact">
+        <div class="contact-mail">
+          <h3 class="contact-mail__head">メールアドレス</h3>
+          <div class="contact-mail__box">
+            <p>samplesamplesample@gmail.com</p>
+            <button class="btn-copy"><img src="img/icon-copy.svg" alt="メールアドレスコピーボタン"></button>
+          </div>
+        </div>
+
+        <div class="contact-twitter">
+          <h3 class="contact-twitter__head">Twitter</h3>
+          <p class="contact-twitter__box">
+            <a href="">
+              <img src="img/icon-twitter.svg" alt="ツイッターボタン">
+            </a>
+          </p>
+        </div>
       </div>
       
     </main>
