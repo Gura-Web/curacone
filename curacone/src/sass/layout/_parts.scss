@@ -21,9 +21,11 @@
   font-family: $mplus;
   &--blue{
     background: $blue;
+    color: #fff;
   }
   &--yellow{
     background: $yellow;
+    color: #fff;
   }
 }
 
@@ -117,3 +119,65 @@
     transform: rotate(-45deg);
   }
 }
+
+// mypage
+.btn-edit{
+  width: 200px;
+  margin-bottom: 10px;
+  background: $thin;
+  font-size: 1.4rem;
+  img{
+    margin-right: 4px;
+  }
+}
+.btn-cancel{
+  border: solid 1px $black;
+}
+.btn-preser{
+  border: solid 1px $blue;
+}
+.btn-cancel,.btn-preser{
+  width: 150px;
+  font-size: 1.6rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.btn-delete{
+  width: 130px;
+  background: $red;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-family: $mplus;
+  font-size: 1.4rem;
+}
+.btn-erasure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 1rem;
+  background: $red;
+  &::before,
+  &::after{
+    display: block;
+    content: '';
+    width: 26px;
+    height: 4px;
+    border-radius: 2rem;
+    background: #fff;
+    position: absolute;
+  }
+  &:before{
+    transform: rotate(45deg);
+  }
+  &:after{
+    transform: rotate(-45deg);
+  }
+}
+
+// 作品投稿ボタン
+.btn-post{
+  width: 200px;
+  padding: 10px 0;
+}
+ 
