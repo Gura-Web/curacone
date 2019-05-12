@@ -10,14 +10,12 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <header class="head-sign">
-    <h1 class="logo"><img src="img/logo.png" alt="CuraCone"></h1>
-  </header>
+  <?php include("header.php") ?>
   <main class="sign-wrap">
     <div class="sign">
       <div class="sign__change">
-        <button class="btn-signIn changeFlg on"><span>SIGN</span>&nbsp;IN</button>
-        <button class="btn-signup changeFlg"><span>SIGN</span>&nbsp;UP</button>
+        <p><a href="sign.php?type=in" class="btn-signIn changeFlg on"><span>SIGN</span>&nbsp;IN</a></p>
+        <p><a href="sign.php?type=up" class="btn-signup changeFlg"><span>SIGN</span>&nbsp;UP</a></p>
       </div>
 
       <form action="" class="sign__form">
@@ -37,10 +35,7 @@
     <div class="sign-deco">
       <img src="img/deco-sign.svg" alt="">
     </div>
-    
   </main>
-  <footer class="foot">
-    &copy; 2019 curacone.
-  </footer>
+  <?php include("footer.php") ?>
 </body>
 </html>

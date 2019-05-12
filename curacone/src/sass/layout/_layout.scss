@@ -5,11 +5,14 @@
   position: fixed;
   box-shadow: 3px 0 20px rgba(0,0,0,0.1);
   .logo{
-    margin: 60px 0 80px;
-    text-align: center;
+  margin: 60px 0 80px;
+  text-align: center;
   }
   .login,
   .guest{
+    p{
+      margin-bottom: 34px;
+    }
     width: 100%;
     height: 90px;
     font-family: $mplus;
@@ -31,6 +34,8 @@
     }
   }
 }
+
+
 .menu-glnav__list.on{
   background: $thin;
   span{
@@ -91,8 +96,9 @@
     }
   }
 }
+
 // メイン
-main{
+.main-column{
   width: calc(100% - 280px);
   margin-left: 280px;
 }

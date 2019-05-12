@@ -426,6 +426,7 @@
   margin: 56px 0 0 60px;
 }
 .sign-wrap{
+  max-width: 1280px;
   height: calc(100% - 147px);// あとでなくす
   display: flex;
   justify-content: space-between;
@@ -531,9 +532,7 @@
 
 // complate
 .comp-wrap{
-  width: 100%;
   height: calc(100% - 147px);// あとでなくす
-  margin: 0;
   font-weight: bold;
 }
 .comp{

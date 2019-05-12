@@ -33,3 +33,23 @@ li{
 img{
   vertical-align: bottom;
 }
+@media (max-width: 1280px){
+  html{
+    font-size: 50%;
+  }
+}
+@media (max-width: 960px){
+  html{
+    font-size: 45%;
+  }
+}
+@media (max-width: 600px){
+  html{
+    font-size: 40%;
+  }
+}
+@media (max-width: 480px){
+  html{
+    font-size: 35%;
+  }
+}
