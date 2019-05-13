@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <?php include("menu.php") ?>
+  <?php include("read/menu.php") ?>
 
   <main class="deco all main-column"><!-- .all今だけ -->  
     <div class="title">
@@ -20,6 +20,6 @@
     <p class="set-pass">パスワードを忘れた方は<a href="">コチラ</a></p>
     
   </main>
-  <?php include("footer.php") ?>
+  <?php include("read/footer.php") ?>
 </body>
 </html>

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <?php include("header.php") ?>
+  <?php include("read/header.php") ?>
   <main class="sign-wrap">
     <div class="sign">
       <div class="sign__change">
@@ -36,6 +36,6 @@
       <img src="img/deco-sign.svg" alt="">
     </div>
   </main>
-  <?php include("footer.php") ?>
+  <?php include("read/footer.php") ?>
 </body>
 </html>

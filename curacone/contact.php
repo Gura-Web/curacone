@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <?php include("menu.php") ?>
+  <?php include("read/menu.php") ?>
   <main class="deco main-column">
     <div class="title">
       <h2 class="title__head"><span>お問い合わせ</span><br>Contact&nbsp;us</h2>
@@ -35,6 +35,6 @@
       </div>
     </div>
   </main>
-  <?php include("footer.php") ?>
+  <?php include("read/footer.php") ?>
 </body>
 </html>

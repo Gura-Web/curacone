@@ -1,4 +1,5 @@
 // 個別につけるスタイル
+// モーダルウィンドウ・マイページ・投稿ページ・設定・コンタクト・会員登録・ログイン
 
 // Home モーダル
 .modal-wrap{
@@ -228,8 +229,7 @@
   flex-direction: column;
   align-items: flex-end;
   &__btn{
-    padding: 7px 0;
-    text-align: center;
+    
   }
 }
 .edit{
@@ -504,9 +504,9 @@
   font-size: 4.2rem;
   font-weight: bold;
   opacity: 0.3;
-}
-.changeFlg.on{
-  opacity: 1;
+  &.on{
+    opacity: 1;
+  }
 }
 .btn-signIn{
   span{

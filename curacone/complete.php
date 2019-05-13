@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <?php include("header.php") ?>
+  <?php include("read/header.php") ?>
   <main class="comp-wrap">
     <div class="comp">
       <h2 class="comp__title"><span>THANK</span>&nbsp;YOU</h2>
@@ -18,6 +18,6 @@
       <p><a class="btn btn--yellow comp__btn">ホーム画面に戻る</a></p>
     </div>    
   </main>
-  <?php include("footer.php") ?>
+  <?php include("read/footer.php") ?>
 </body>
 </html>

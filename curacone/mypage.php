@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <?php include("menu.php") ?>
+  <?php include("read/menu.php") ?>
   <main class="main-column">
     <div class="profile-wrap">
       <div class="profile">
@@ -173,6 +173,6 @@
       </a>
     </div>
   </main>
-  <?php include("footer.php") ?>
+  <?php include("read/footer.php") ?>
 </body>
 </html>

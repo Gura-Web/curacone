@@ -26,25 +26,25 @@
     <ul>
       <li class="menu-glnav__list on">
         <a href="index.php">
-          <?php include("read/icon-home.html"); ?>
+          <?php include("icon-home.html"); ?>
           <span>HOME</span>
         </a>
       </li>
       <li class="menu-glnav__list">
         <a href="mypage.php">
-          <?php include("read/icon-mypage.html"); ?>
+          <?php include("icon-mypage.html"); ?>
           <span>MyPage</span>
         </a>
       </li>
       <li class="menu-glnav__list">
         <a href="contact.php">
-          <?php include("read/icon-contact.html"); ?>
+          <?php include("icon-contact.html"); ?>
           <span>Contact</span>
         </a>
       </li>
       <li class="menu-glnav__list">
         <a href="setting.php">
-          <?php include("read/icon-setting.html"); ?>
+          <?php include("icon-setting.html"); ?>
           <span>Setting</span>
         </a>
       </li>

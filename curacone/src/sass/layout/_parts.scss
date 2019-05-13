@@ -15,6 +15,14 @@
   }
 }
 
+@mixin baseBtn($width:196px,$height:38px,$fontSize:1.6rem){
+  display: block;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  font-size: $fontSize;
+}
+
 .btn{
   border-radius: 2rem;
   text-align: center;
@@ -27,6 +35,19 @@
     background: $yellow;
     color: #fff;
   }
+}
+
+.guest .btn{
+  @include baseBtn();
+}
+.prof-edit .btn{
+  @include baseBtn(150px,38px,1.6rem);
+}
+.btn-post{
+  @include baseBtn(200px,38px,1.4rem);
+}
+.form-content__btn{
+  @include baseBtn(372px,44px ,1.4rem);
 }
 
 // view moreボタン
@@ -175,9 +196,5 @@
   }
 }
 
-// 作品投稿ボタン
-.btn-post{
-  width: 200px;
-  padding: 10px 0;
-}
+
  
