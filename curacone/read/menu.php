@@ -1,8 +1,13 @@
+<header class="head-sp">
+  <?php include("logo.html") ?>
+  <div class="head-sp__humb btn-humb">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
 <div class="menu">
-  <!-- <header>
-    <h1><img src="img/logo.png" alt="CuraCone"></h1>
-  </header> -->
-
+  <button class="btn-menu-close"></button>
   <?php include("logo.html") ?>
 
   <!-- ログイン済み -->

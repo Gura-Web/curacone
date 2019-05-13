@@ -11,7 +11,6 @@
 </head>
 <body>
   <?php include("read/menu.php"); ?>
-
     <main class="deco main-column">
       <div class="title bg">
         <h2 class="title__head"><span>みんなの作品</span><br>All&nbsp;Works</h2>
@@ -156,5 +155,7 @@
       </div>
     </main>
   <?php include("read/footer.php") ?>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/event.js"></script>
 </body>
 </html>

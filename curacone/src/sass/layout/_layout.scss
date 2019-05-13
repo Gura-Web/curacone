@@ -33,9 +33,52 @@
       margin-right: 8px;
     }
   }
+  &.on{
+    opacity: 1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: $bg;
+  }
+}
+@media(max-width:960px){
+  .menu{
+    opacity: 0;
+  }
 }
 
+// スマホ版のみのheader
+.head-sp{
+  display: none;
+  width: 100%;
+  height: 46px;
+  line-height: 36px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: $bg;
+  box-shadow: 0 3px 6px rgba(000,000,000,0.16);
+  &__humb{
+    position: absolute;
+    top: 12px;
+    right: 14px;
+  }
+}
+@media (max-width:960px){
+  .head-sp{
+    display: block;
+  }
+}
+.head-sp h1{
+  height: 24px;
+  img{
+    height: 100%;
+  }
+}
 
+// menuの中身
 .menu-glnav__list.on{
   background: $thin;
   span{
@@ -98,6 +141,17 @@
 .main-column{
   width: calc(100% - 280px);
   margin-left: 280px;
+  &.sp{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width:960px){
+  .main-column{
+    width: 100%;
+    margin-top: 46px;
+    margin-left: 0;
+  }
 }
 .deco{
   background: url("../img/bg.svg") no-repeat -160px -190px;
