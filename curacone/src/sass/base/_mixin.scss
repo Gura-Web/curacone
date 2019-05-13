@@ -1,0 +1,29 @@
+@mixin baseBtn($width:196px,$height:38px,$fontSize:1.6rem){
+  display: block;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  font-size: $fontSize;
+}
+
+@mixin closeBtn($width,$height,$back) {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  &::before,
+  &::after{
+    display: block;
+    content: '';
+    width: $width;
+    height: $height;
+    background: $back;
+    border-radius: 2rem;
+    position: absolute;
+  }
+  &:before{
+    transform: rotate(45deg);
+  }
+  &:after{
+    transform: rotate(-45deg);
+  }
+}

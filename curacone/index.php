@@ -10,64 +10,8 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <!-- <header>
-    <h1><img src="img/logo.png" alt="CuraCone"></h1>
-  </header> -->
-    <div class="menu">
-      <h1 class="logo"><a href="index.html"><img src="img/logo.png" alt="CuraCone"></a></h1>
-
-      <!-- ログイン済み -->
-      <!-- <div class="login">
-        <a href="mypage.html" class="login__icon">
-          <p class="icon"><img src="img/icon-sample.png" alt="自分のプロフィールアイコン"></p>
-          <div class="login__prof">
-            <p>三木 ケンケン</p>
-            <span>ログイン中</span>
-          </div>
-        </a>
-      </div> -->
-
-      <!-- ログインしてない -->
-      <div class="guest">
-        <button class="btn btn--blue">ログイン</button>
-        <button class="btn btn--yellow">会員登録</button>
-      </div>
-
-      <nav class="menu__glnav">
-        <ul>
-          <li class="menu-glnav__list on">
-            <a href="index.php">
-              <?php include("read/icon-home.html"); ?>
-              <span>HOME</span>
-            </a>
-          </li>
-          <li class="menu-glnav__list">
-            <a href="mypage.php">
-              <?php include("read/icon-mypage.html"); ?>
-              <span>MyPage</span>
-            </a>
-          </li>
-          <li class="menu-glnav__list">
-            <a href="contact.php">
-              <?php include("read/icon-contact.html"); ?>
-              <span>Contact</span>
-            </a>
-          </li>
-          <li class="menu-glnav__list"> 
-            <a href="setting.php">
-              <?php include("read/icon-setting.html"); ?>
-              <span>Setting</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <button class="btn menu__logout">
-        <img src="img/icon-logout.svg" alt="">
-        ログアウト
-      </button>
-    </div><!-- .side -->
-
-    <main class="deco">
+  <?php include("read/menu.php"); ?>
+    <main class="deco main-column">
       <div class="title bg">
         <h2 class="title__head"><span>みんなの作品</span><br>All&nbsp;Works</h2>
         <div class="work-search">
@@ -75,10 +19,8 @@
             <img src="img/icon-search.svg" alt="">
             <input type="text" placeholder="検索したいキーワードを入力"></p>
           <img class="work-search__img" src="img/deco-search.svg" alt="">
+        </div>
       </div>
-      </div>
-
-      
 
       <!-- <div class="modal-wrap">
         <button class="btn-modal-close"></button>
@@ -212,9 +154,8 @@
         </a>
       </div>
     </main>
-  <footer class="foot">
-    &copy; 2019 curacone.
-  </footer>
-  
+  <?php include("read/footer.php") ?>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/event.js"></script>
 </body>
 </html>

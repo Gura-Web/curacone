@@ -5,7 +5,6 @@
     border-radius: 1.8rem;
   }
 }
-
 .icon-mini{
   width: 24px;
   height: 24px;
@@ -15,6 +14,7 @@
   }
 }
 
+// ボタン
 .btn{
   border-radius: 2rem;
   text-align: center;
@@ -26,6 +26,49 @@
   &--yellow{
     background: $yellow;
     color: #fff;
+  }
+}
+// ベースボタン
+.guest .btn{
+  @include baseBtn();
+}
+.prof-edit .btn{
+  @include baseBtn(150px,38px,1.6rem);
+}
+.btn-post{
+  @include baseBtn(200px,38px,1.4rem);
+}
+.form-content__btn{
+  @include baseBtn(372px,44px ,1.4rem);
+}
+// 削除ボタン
+.btn-modal-close{
+  @include closeBtn(40px,4px,#fff );
+}
+.btn-menu-close{
+  display: none;
+  @include closeBtn(18px,4px,$black );
+}
+@media (max-width: 960px){
+  .btn-menu-close{
+    display: block;
+  }
+}
+
+// ハンバーガーメニュー
+.btn-humb{
+  display: none;
+  span{
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin-bottom: 8px;
+  background: $blue;
+  }
+}
+@media (max-width: 960px){
+  .btn-humb{
+    display: block;
   }
 }
 
@@ -96,29 +139,14 @@
     font-family: $mplus;
   }
 }
-
-// モーダル削除ボタン
-.btn-modal-close{
-  position: absolute;
-  top: 40px;
-  right: 60px;
-  &::before,
-  &::after{
-    display: block;
-    content: '';
-    width: 40px;
-    height: 4px;
-    border-radius: 2rem;
-    background: #fff;
-    position: absolute;
-  }
-  &:before{
-    transform: rotate(45deg);
-  }
-  &:after{
-    transform: rotate(-45deg);
+@media (max-width: 1280px){
+  .btn-add__deco{
+    width: 100px;
+    height: 100px;
   }
 }
+
+
 
 // mypage
 .btn-edit{
@@ -175,9 +203,5 @@
   }
 }
 
-// 作品投稿ボタン
-.btn-post{
-  width: 200px;
-  padding: 10px 0;
-}
+
  

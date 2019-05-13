@@ -10,100 +10,41 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <!-- <header> 
-    <h1><img src="img/logo.png" alt="CuraCone"></h1>
-  </header> -->
-    <div class="menu">
-      <h1 class="logo"><a href="index.html"><img src="img/logo.png" alt="CuraCone"></a></h1>
+  <?php include("read/menu.php") ?>
+  <main class="deco post main-column">
+    <div class="title">
+      <h2 class="title__head"><span>あなたの作品を投稿しよう</span><br>Posting&nbsp;Your&nbsp;Works</h2>
+    </div>
 
-      <!-- ログイン済み -->
-      <!-- <div class="login">
-        <a href="mypage.html" class="login__icon">
-          <p class="icon"><img src="img/icon-sample.png" alt="自分のプロフィールアイコン"></p>
-          <div class="login__prof">
-            <p>三木 ケンケン</p>
-            <span>ログイン中</span>
-          </div>
-        </a>
-      </div> -->
+    <div class="post-inner">
+      <form action="" class="post-form">
+        <dl class="form-item">
+          <dt class="post-form__head form-item__name">作品名<span>*</span></dt>
+          <dd class="post-form__column"><p><input type="text" placeholder="投稿する作品の名前を入力"></p></dd>
 
-      <!-- ログインしてない -->
-      <div class="guest">
-        <button class="btn btn--blue">ログイン</button>
-        <button class="btn btn--yellow">会員登録</button>
-      </div>
+          <dt class="post-form__head form-item__url">作品URL</dt>
+          <dd class="post-form__column"><p><input type="text" placeholder="投稿する作品のURLを入力"></p></dd>
 
-      <nav class="menu__glnav">
-        <ul>
-          <li class="menu-glnav__list on">
-            <a href="index.php">
-              <?php include("read/icon-home.html"); ?>
-              <span>HOME</span>
-            </a>
-          </li>
-          <li class="menu-glnav__list">
-            <a href="mypage.php">
-              <?php include("read/icon-mypage.html"); ?>
-              <span>MyPage</span>
-            </a>
-          </li>
-          <li class="menu-glnav__list">
-            <a href="contact.php">
-              <?php include("read/icon-contact.html"); ?>
-              <span>Contact</span>
-            </a>
-          </li>
-          <li class="menu-glnav__list"> 
-            <a href="setting.php">
-              <?php include("read/icon-setting.html"); ?>
-              <span>Setting</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <button class="btn menu__logout">
-        <img src="img/icon-logout.svg" alt="">
-        ログアウト
-      </button>
-    </div><!-- .side -->
+          <dt class="post-form__head form-item__img">作品画像<span>*</span></dt>
+          <dd class="post-form__column">
+            <div class="img-area">ここにファイルをドロップ<br>または
+              <p class="img-area__select">
+                <label for="img-select" class="btn">ファイルを選択</label>
+                <input type="file" id="img-select">
+              </p>
+            </div>
+          </dd>
 
-    <main class="deco post">
-      <div class="title">
-        <h2 class="title__head"><span>あなたの作品を投稿しよう</span><br>Posting&nbsp;Your&nbsp;Works</h2>
-      </div>
+          <dt class="post-form__head form-item__text">説明文<span>*</span></dt>
+          <dd class="post-form__column"><textarea name="" id="" cols="51" rows="10" placeholder="投稿する作品の説明を入力"></textarea></dd>
+        </dl>
+        <button class="btn post-form__btn btn--blue btn-post">作品を投稿</button>
+      </form>
 
-      <div class="post-inner">
-        <form action="" class="post-form">
-          <dl class="form-item">
-            <dt class="post-form__head form-item__name">作品名<span>*</span></dt>
-            <dd class="post-form__column"><p><input type="text" placeholder="投稿する作品の名前を入力"></p></dd>
-
-            <dt class="post-form__head form-item__url">作品URL</dt>
-            <dd class="post-form__column"><p><input type="text" placeholder="投稿する作品のURLを入力"></p></dd>
-
-            <dt class="post-form__head form-item__img">作品画像<span>*</span></dt>
-            <dd class="post-form__column">
-              <div class="img-area">ここにファイルをドロップ<br>または
-                <p class="img-area__select">
-                  <label for="img-select" class="btn">ファイルを選択</label>
-                  <input type="file" id="img-select">
-                </p>
-              </div>
-            </dd>
-
-            <dt class="post-form__head form-item__text">説明文<span>*</span></dt>
-            <dd class="post-form__column"><textarea name="" id="" cols="51" rows="10" placeholder="投稿する作品の説明を入力"></textarea></dd>
-          </dl>
-          <button class="btn post-form__btn btn--blue btn-post">作品を投稿</button>
-        </form>
-
-        <div class="post__deco"><img src="img/deco-post.svg" alt=""></div>
-      </div>
-      
-    </main>
-  <footer class="foot">
-    &copy; 2019 curacone.
-  </footer>
-  
+      <div class="post__deco"><img src="img/deco-post.svg" alt=""></div>
+    </div>
+    
+  </main>
+  <?php include("read/footer.php") ?>
 </body>
 </html>

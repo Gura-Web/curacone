@@ -10,9 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Asap:400,700|M+PLUS+1p:400,700" rel="stylesheet">
 </head>
 <body>
-  <header class="head-sign">
-    <h1 class="logo"><img src="img/logo.png" alt="CuraCone"></h1>
-  </header>
+  <?php include("read/header.php") ?>
   <main class="comp-wrap">
     <div class="comp">
       <h2 class="comp__title"><span>THANK</span>&nbsp;YOU</h2>
@@ -20,8 +18,6 @@
       <p><a class="btn btn--yellow comp__btn">ホーム画面に戻る</a></p>
     </div>    
   </main>
-  <footer class="foot">
-    &copy; 2019 curacone.
-  </footer>
+  <?php include("read/footer.php") ?>
 </body>
 </html>
