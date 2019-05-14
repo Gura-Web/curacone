@@ -32,15 +32,34 @@
 .guest .btn{
   @include baseBtn();
 }
-.prof-edit .btn{
-  @include baseBtn(150px,38px,1.6rem);
-}
 .btn-post{
   @include baseBtn(200px,38px,1.4rem);
 }
 .form-content__btn{
   @include baseBtn(372px,44px ,1.4rem);
 }
+.btn-edit{
+  @include baseBtn(200px,38px,1.4rem);
+  background: $thin;
+  img{
+    position: relative;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%)
+  }
+}
+.btn-cancel{
+  @include baseBtn(150px,38px,1.6rem);
+  border: solid 1px $black;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.btn-preser{
+  @include baseBtn(150px,38px,1.6rem);
+  border: solid 1px $blue;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+
 // 削除ボタン
 .btn-modal-close{
   @include closeBtn(40px,4px,#fff );
@@ -156,26 +175,6 @@
 
 
 // mypage
-.btn-edit{
-  width: 200px;
-  margin-bottom: 10px;
-  background: $thin;
-  font-size: 1.4rem;
-  img{
-    margin-right: 4px;
-  }
-}
-.btn-cancel{
-  border: solid 1px $black;
-}
-.btn-preser{
-  border: solid 1px $blue;
-}
-.btn-cancel,.btn-preser{
-  width: 150px;
-  font-size: 1.6rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
 .btn-delete{
   width: 130px;
   background: $red;
@@ -185,7 +184,7 @@
   font-size: 1.4rem;
 }
 .btn-erasure{
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 38px;
@@ -207,6 +206,9 @@
   }
   &:after{
     transform: rotate(-45deg);
+  }
+  &.on{
+    display: flex;
   }
 }
 

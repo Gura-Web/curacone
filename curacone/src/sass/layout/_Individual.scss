@@ -12,7 +12,7 @@
   background: $light;
   &.on{
     display: block;
-    z-index: 1;
+    z-index: 10;
   }
 }
 .modal{
@@ -175,6 +175,9 @@
 }
 
 // Mypage
+.btn-edit{
+  margin-bottom: 10px;  
+}
 .profile-wrap{
   width: 100%;
   height: 200px;
@@ -206,9 +209,20 @@
 }
 .prof-info{
   display: flex;
-  width: 54%;
   align-items: center;
   font-family: $mplus;
+  &.edit{
+    z-index: 10;
+    div{
+      background: #E6F3FE;
+    }
+    div p{
+      display: inline-block;
+      background: #fff;
+      border: solid 1px #B2DCFF;
+      border-radius: 0.3rem;
+    }
+  }
   div{
     padding: 4px 10px;
   }
@@ -234,22 +248,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  &__btn{
-    
+  &__event{
+    display: none;
+    .btn{
+      margin-left: 4px;
+    }
+    &.edit{
+      display: flex;
+    }
   }
 }
 .edit{
-  display: flex;
-  z-index: 10;
-  div{
-    background: #E6F3FE;
-  }
-  div p{
-    display: inline-block;
-    background: #fff;
-    border: solid 1px #B2DCFF;
-    border-radius: 0.3rem;
-  }
+
 }
 
 .mypage-head{

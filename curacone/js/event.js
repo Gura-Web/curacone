@@ -13,9 +13,14 @@ $(function(){
   // モーダル表示/非表示
   $.each($(".work"),function(){
     $(this).on("click",function(){
-      $(".modal-wrap").addClass("on");
-      $(".foot").addClass("no");
+      if (!$(".btn-erasure").hasClass("on")){
+        $(".modal-wrap").addClass("on");
+        $(".foot").addClass("no");
+        console.log($(this))
+      }
+      
     })
+    
   })
   $(".btn-modal-close").on("click",function(){
     $(".modal-wrap").removeClass("on");
@@ -33,4 +38,26 @@ $(function(){
     }
     $("main").height(mainHei);
   }
+
+  // マイページ編集
+  $(".btn-edit").on("click",function(){
+    $(".prof-info").addClass("edit");
+    $(".prof-edit__event").addClass("edit");
+  })
+
+  $(".btn-cancel,.btn-preser").on("click",function(){
+    $(".prof-info").removeClass("edit");
+    $(".prof-edit__event").removeClass("edit");
+  })
+
+  // 投稿作品削除
+  $(".btn-delete").on("click",function(){
+    $(".btn-erasure").toggleClass("on");
+  })
+  console.log($(".btn-erasure"))
+
+  $(".btn-erasure").on("click",function(){
+    $(this).parent("li").css("display","none");
+    console.log($(this))
+  })
 });
