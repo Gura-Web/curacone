@@ -5,6 +5,12 @@
   background: url("../img/deco-search-bg.svg") no-repeat;
     background-position: right 36px top 194px;
 }
+@media(max-width: 960px){
+  .title.bg{
+    background-size: 180px;
+    background-position: right -4px top 210px;
+  }
+}
 .title{
   max-width: 68%;
   margin: 0 auto;
@@ -45,10 +51,34 @@
   }
 }
 @media (max-width: 1280px){
-  .work-search__bar{
-    padding: 10px 16px; 
+  .title.bg{
+    background-position: right 36px top 172px;
+  }
+  .work-search{
+    &__bar{
+      padding: 10px 16px; 
+    }
+    &__img{
+      top: 228px;
+    }
   }
 }
+@media (max-width: 960px){
+  .work-search__img{
+    width: 110px;
+    top: 244px;
+    right: 30px;
+  }
+}
+@media (max-width: 600px){
+  .title.bg{
+    background: none;
+  }
+  .work-search__img{
+    display: none;
+  }
+}
+
 
 // 作品リスト
 .workList{
@@ -88,6 +118,9 @@
 @media (max-width: 960px){
   .work{
     width: 48%;
+  }
+  .workList{
+    max-width: 86%;
   }
 }
 .work-info__prof{
