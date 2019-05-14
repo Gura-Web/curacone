@@ -162,9 +162,7 @@
     margin-top: 200px;
   }
 }
-.all{
-  height: calc(100% - 40px);
-}
+
 
 // フッター
 .foot{
@@ -178,5 +176,8 @@
   line-height: 40px;
   font-family: $asap;
   text-align: center;
+  &.no{
+    opacity: 0;
+  }
 }
 

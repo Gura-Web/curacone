@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <!-- <div class="modal-wrap">
+      <div class="modal-wrap">
         <button class="btn-modal-close"></button>
         <div class="modal">
           <p class="modal__thumb"><img src="img/img-modal.png" alt=""></p>
@@ -73,7 +73,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
       
       <ul class="workList">
         <li class="work">
@@ -155,7 +155,5 @@
       </div>
     </main>
   <?php include("read/footer.php") ?>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/event.js"></script>
 </body>
 </html>
