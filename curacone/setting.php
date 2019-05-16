@@ -12,7 +12,7 @@
 <body>
   <?php include("read/menu.php") ?>
 
-  <main class="deco all main-column"><!-- .all今だけ -->  
+  <main class="deco main-column">
     <div class="title">
       <h2 class="title__head"><span>設定</span><br>Setting</h2>
     </div>

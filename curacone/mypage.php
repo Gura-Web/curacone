@@ -14,24 +14,26 @@
   <main class="main-column">
     <div class="profile-wrap">
       <div class="profile">
-        <div class="prof-info edit">
-          <p class="prof-info__icon"><img src="img/icon-prof.png" alt=""></p>
-          <div>
-            <p class="prof-info__name">三木 ケンケン</p>
-            <p class="prof-info__text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+        <div class="profile-inner">
+          <div class="prof-info">
+            <p class="prof-info__icon"><img src="img/icon-prof.png" alt=""></p>
+            <div class="prof-text-wrap">
+              <p class="prof-info__name"><input type="text" value="三木 ケンケン" readonly></p>
+              <p class="prof-info__text"><textarea cols="20" rows="3" readonly>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</textarea></p>
+            </div>
           </div>
-        </div>
-        <div class="prof-edit">
-          <button class="btn prof-edit__btn btn-edit"><img src="img/icon-edit.svg" alt="">プロフィールを編集</button>
-          <div class="edit">
-            <button class="btn prof-edit__btn btn-cancel">キャンセル</button>
-            <button class="btn prof-edit__btn btn-preser btn--blue">変更を保存</button>
+          <div class="prof-edit">
+            <button class="btn prof-edit__change btn-edit"><img src="img/icon-edit.svg" alt="">プロフィールを編集</button>
+            <div class="prof-edit__event">
+              <button class="btn prof-edit__btn btn-cancel">キャンセル</button>
+              <button class="btn prof-edit__btn btn-preser btn--blue">変更を保存</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <div class="modal-wrap">
+    <div class="modal-wrap">
       <button class="btn-modal-close"></button>
       <div class="modal">
         <p class="modal__thumb"><img src="img/img-modal.png" alt=""></p>
@@ -82,7 +84,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <div class="mypage-head">
       <h2 class="mypage-head__title">あなたの作品集</h2>
       <button class="btn-delete mypage-head__btn">作品を削除</button>

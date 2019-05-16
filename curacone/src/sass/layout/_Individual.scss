@@ -1,13 +1,24 @@
 // 個別につけるスタイル
-// モーダルウィンドウ・マイページ・投稿ページ・設定・コンタクト・会員登録・ログイン
+// モーダルウィンドウ・マイページ・投稿ページ・設定・コンタクト・会員登録・ログイン・マイページヘッダー
 
 // Home モーダル
 .modal-wrap{
+  display: none;
   width: calc(100% - 280px);
   padding: 100px 0;
   position: absolute;
+  z-index: -1;
   top: 0;
   background: $light;
+  &.on{
+    display: block;
+    z-index: 10;
+  }
+}
+@media (max-width: 960px){
+  .modal-wrap{
+    width: 100%;
+  }
 }
 .modal{
   width: 60%;
@@ -169,6 +180,9 @@
 }
 
 // Mypage
+.btn-edit{
+  margin-bottom: 10px;  
+}
 .profile-wrap{
   width: 100%;
   height: 200px;
@@ -188,21 +202,73 @@
     background: rgba(255,255,255,0.7);
   }
 }
+.prof-text-wrap{
+  max-width: 300px;
+  margin-right: 10px;
+}
 .profile{
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
   align-items: center;
   max-width: 68%;
-  margin: 0 auto;
   position: relative;
+}
+.profile-inner{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media ( max-width: 960px ){
+  .profile{
+    max-width: 80%;
+  }
+  .profile-inner{
+    background: #fff;
+    flex-direction: column;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 6px 25px rgba(000,000,000,0.16);
+    position: relative;
+    top: 100px;
+  }
+  .prof-info{
+    flex-direction: column;
+  }
+  .prof-text-wrap{
+    text-align: center;
+  }
+  .prof-edit{
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    &__event{
+      position: absolute;
+    }
+    &__change{
+      margin: 0;
+      z-index: 1;
+    }
+  }
 }
 .prof-info{
   display: flex;
-  width: 54%;
   align-items: center;
   font-family: $mplus;
+  &.edit{
+    z-index: 10;
+    div{
+      background: #E6F3FE;
+    }
+    div p{
+      background: #fff;
+      border: solid 1px #B2DCFF;
+      border-radius: 0.3rem;
+    }
+  }
   div{
     padding: 4px 10px;
   }
@@ -218,31 +284,32 @@
     margin-bottom: 4px;
     font-size: 2.6rem;
     font-weight: bold;
+    input{
+      width: 100%;
+    }
   }
   &__text{
     padding: 2px 10px;
     font-size: 1.4rem;
+    textarea{
+      width: 100%;
+    }
   }
 }
 .prof-edit{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  &__btn{
-    
-  }
-}
-.edit{
-  display: flex;
-  z-index: 10;
-  div{
-    background: #E6F3FE;
-  }
-  div p{
-    display: inline-block;
-    background: #fff;
-    border: solid 1px #B2DCFF;
-    border-radius: 0.3rem;
+  justify-content: center;
+  &__event{
+    display: flex;
+    opacity: 0;
+    .btn{
+      margin-left: 4px;
+    }
+    &.edit{
+      opacity: 1;
+    }
   }
 }
 
@@ -258,8 +325,35 @@
     font-family: $mplus;
   }
 }
+@media ( max-width: 960px ){
+  .mypage-head{
+    display: block;
+    max-width: 86%;
+    position: relative;
+    margin-top: 230px;
+    margin-bottom: 100px;
+    &__title{
+      margin-bottom: 34px;
+      text-align: center;
+    }
+    &__btn{
+      position: absolute;
+      right: 0;
+    }
+  }
+}
 
 //  投稿ページ
+.br{
+  display: block;
+}
+.post .title__head{
+  line-height: 1.4;
+  span{
+    display: block;
+    line-height: 2;
+  }
+} 
 .post-inner{
   display: flex;
   justify-content: space-between;
@@ -322,6 +416,11 @@
   border: dotted 4px $light;
   color: $light;
   text-align: center;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
   &__select{
     input{
       display: none;
@@ -336,6 +435,35 @@
       background: $gray;
       color: #fff;
     }
+  }
+}
+@media (max-width:960px){
+  .post__deco{
+    width: 50%;
+  }
+  .post-form{
+    width: 100%;
+    &__column{
+      width: auto;
+    }
+  }
+  .form-item{
+    &__img{
+      +dd{
+        width: auto;
+      }
+    }
+    &__text{
+      +dd{
+        width: auto;
+      }
+    }
+  }
+   
+}
+@media(max-width: 480px){
+  .post-form__column{
+    width: 300px;
   }
 }
 
@@ -356,7 +484,7 @@
 // Contact
 .contact{
   max-width: 560px; 
-  margin: 0 auto 100px;
+  margin: 0 auto;
   text-align: center;
   background: $thin;
   border-radius: 1.5rem;
@@ -365,15 +493,28 @@
     content: '';
     width: 200px;
     height: 200px;
-    top: 340px;
+    top: 260px;
     left: calc(50% + 38px);
     position: absolute;
     background-image: url(../img/deco-contact.svg);
     background-repeat: no-repeat;
   }
 }
+@media( max-width: 960px ){
+  .content,
+  .content-mail__box{
+    width: 450px;
+  }
+  .content-mail__box{
+    height: 34px;
+  }
+  .contact::before{
+    left: calc(50% - 100px);
+    top: 316px;
+  }
+}
 .contact-mail{
-  margin-top: 140px;
+  margin-top: 100px;
   padding-top: 140px;
   font-size: 2rem;
   font-family: $mplus;
@@ -422,8 +563,8 @@
 }
 
 // sign
-.head-sign{
-  margin: 56px 0 0 60px;
+.head-simple{
+  padding: 56px 0 0 60px;
 }
 .sign-wrap{
   max-width: 1280px;
@@ -529,10 +670,20 @@
     transform: rotate(22deg);
   }
 }
+@media (max-width:960px){
+  .sign{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sign-deco{
+    display: none;
+  }
+}
 
 // complate
 .comp-wrap{
-  height: calc(100% - 147px);// あとでなくす
+  // height: calc(100% - 147px);// あとでなくす
   font-weight: bold;
 }
 .comp{

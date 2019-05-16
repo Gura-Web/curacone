@@ -32,15 +32,46 @@
 .guest .btn{
   @include baseBtn();
 }
-.prof-edit .btn{
-  @include baseBtn(150px,38px,1.6rem);
-}
 .btn-post{
   @include baseBtn(200px,38px,1.4rem);
 }
 .form-content__btn{
   @include baseBtn(372px,44px ,1.4rem);
 }
+.btn-edit{
+  @include baseBtn(200px,38px,1.4rem);
+  background: $thin;
+  img{
+    position: relative;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%)
+  }
+}
+.btn-cancel{
+  @include baseBtn(150px,38px,1.6rem);
+  border: solid 1px $black;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.btn-preser{
+  @include baseBtn(150px,38px,1.6rem);
+  border: solid 1px $blue;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+@media( max-width: 1280px ){
+  .btn-edit{
+    width: 170px;
+  }
+  .btn-cancel{
+    width: 110px;
+  }
+  .btn-preser{
+    width: 110px;
+  }
+}
+
+
+
 // 削除ボタン
 .btn-modal-close{
   @include closeBtn(40px,4px,#fff );
@@ -58,6 +89,7 @@
 // ハンバーガーメニュー
 .btn-humb{
   display: none;
+  cursor: pointer;
   span{
   display: block;
   width: 22px;
@@ -107,8 +139,8 @@
 //  作品追加ボタン
 .btn-add{
   position: fixed;
-  right: 110px;
-  bottom: 110px;
+  right: 8%;
+  bottom: 60px;
   text-align: center;
   &__deco{
     display: flex;
@@ -122,7 +154,7 @@
     box-shadow: 0 6px 10px rgba(0,0,0,0.1);
     span{
       display: block;
-      width: 58px;
+      width: 50%;
       height: 4px;
       background: #fff;
       position: absolute;
@@ -145,32 +177,19 @@
     height: 100px;
   }
 }
+@media (max-width: 960px){
+  .btn-add__deco{
+    width: 80px;
+    height: 80px;
+  }
+}
 
 
 
 // mypage
-.btn-edit{
-  width: 200px;
-  margin-bottom: 10px;
-  background: $thin;
-  font-size: 1.4rem;
-  img{
-    margin-right: 4px;
-  }
-}
-.btn-cancel{
-  border: solid 1px $black;
-}
-.btn-preser{
-  border: solid 1px $blue;
-}
-.btn-cancel,.btn-preser{
-  width: 150px;
-  font-size: 1.6rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
 .btn-delete{
   width: 130px;
+  height: 30px;
   background: $red;
   color: #fff;
   border-radius: 0.5rem;
@@ -178,7 +197,7 @@
   font-size: 1.4rem;
 }
 .btn-erasure{
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 38px;
@@ -200,6 +219,9 @@
   }
   &:after{
     transform: rotate(-45deg);
+  }
+  &.on{
+    display: flex;
   }
 }
 
