@@ -73,6 +73,59 @@ $(function(){
   })
   
 
+  // ドラッグ&ドロップでファイル送信
+  // 対応の確認 操作ができるかどうかを見る
+  if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
+    return;
+  }
+
+  // イベントのキャンセル関数
+  const cancelEvent = function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  };
+
+  // ファイルを読み込む関数
+  const dropFileEvent = function (event) {
+
+    cancelEvent(event);
+
+    // ファイル一覧の取得
+    let files = event.originalEvent.dataTransfer.files;
+
+    // 各ファイルに対して処理を実施
+    for (let i = 0; i < files.length; i++) {
+
+      // ファイルの取得・読み取り
+      let f = files[i];
+      const reader = new FileReader();
+
+      // 読み込み完了時の関数を登録
+      reader.onload = function (e) {
+        // Data URL形式のデータを取り出す(base64)
+        let text = e.target.result;
+
+        // outputに表示
+        $(".img-area").text("");
+        let img = $("<img>");
+        img.attr("src", text);
+        $(".img-area").append(img);
+      };
+
+      // 読み込んだファイルをDataURL形式で読み取る
+      reader.readAsDataURL(f);
+    }
+  };
+
+  // イベントの設定
+  // dragenter,dragover,dragleave => 通常のイベントをキャンセルする関数を実行
+  // drop => ファイルドロップ時の処理の関数を実行
+  $(".img-area").on({
+    "dragenter": cancelEvent,
+    "dragover": cancelEvent,
+    "dragleave": cancelEvent,
+    "drop": dropFileEvent
+  });
 
   
 });

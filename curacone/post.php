@@ -13,7 +13,7 @@
   <?php include("read/menu.php") ?>
   <main class="deco post main-column">
     <div class="title">
-      <h2 class="title__head"><span>あなたの作品を投稿しよう</span><br>Posting&nbsp;Your&nbsp;Works</h2>
+      <h2 class="title__head"><span>あなたの作品を<br class="">投稿しよう</span>Posting&nbsp;<br class="">Your&nbsp;Works</h2>
     </div>
 
     <div class="post-inner">
