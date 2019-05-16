@@ -14,18 +14,20 @@
   <main class="main-column">
     <div class="profile-wrap">
       <div class="profile">
-        <div class="prof-info">
-          <p class="prof-info__icon"><img src="img/icon-prof.png" alt=""></p>
-          <div>
-            <p class="prof-info__name">三木 ケンケン</p>
-            <p class="prof-info__text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+        <div class="profile-inner">
+          <div class="prof-info">
+            <p class="prof-info__icon"><img src="img/icon-prof.png" alt=""></p>
+            <div class="prof-text-wrap">
+              <p class="prof-info__name">三木 ケンケン</p>
+              <p class="prof-info__text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+            </div>
           </div>
-        </div>
-        <div class="prof-edit">
-          <button class="btn prof-edit__change btn-edit"><img src="img/icon-edit.svg" alt="">プロフィールを編集</button>
-          <div class="prof-edit__event">
-            <button class="btn prof-edit__btn btn-cancel">キャンセル</button>
-            <button class="btn prof-edit__btn btn-preser btn--blue">変更を保存</button>
+          <div class="prof-edit">
+            <button class="btn prof-edit__change btn-edit"><img src="img/icon-edit.svg" alt="">プロフィールを編集</button>
+            <div class="prof-edit__event">
+              <button class="btn prof-edit__btn btn-cancel">キャンセル</button>
+              <button class="btn prof-edit__btn btn-preser btn--blue">変更を保存</button>
+            </div>
           </div>
         </div>
       </div>

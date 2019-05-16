@@ -58,6 +58,18 @@
   border: solid 1px $blue;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
+@media( max-width: 1280px ){
+  .btn-edit{
+    width: 170px;
+  }
+  .btn-cancel{
+    width: 110px;
+  }
+  .btn-preser{
+    width: 110px;
+  }
+}
+
 
 
 // 削除ボタン
@@ -177,6 +189,7 @@
 // mypage
 .btn-delete{
   width: 130px;
+  height: 30px;
   background: $red;
   color: #fff;
   border-radius: 0.5rem;
