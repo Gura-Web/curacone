@@ -2,7 +2,6 @@ $(function(){
 
   // メニュー表示/非表示
   $(".btn-humb").on("click",function(){
-    console.log("aaa");
     $(".menu").addClass("on");
   })
 
@@ -16,7 +15,6 @@ $(function(){
       if (!$(".btn-erasure").hasClass("on")){
         $(".modal-wrap").addClass("on");
         $(".foot").addClass("no");
-        console.log($(this))
       }
       
     })
@@ -28,13 +26,14 @@ $(function(){
   })
 
   // footer常に下に
+  let mainHei = "";
   if ($("main").height() < $(window).height()){
     
     if ($(".head-simple").height() == undefined){
-      var mainHei = $(window).height() - $(".foot").height();
+      mainHei = $(window).height() - $(".foot").height();
     }
     else{
-      var mainHei = $(window).height() - $(".foot").height() - $(".head-simple").innerHeight();
+      mainHei = $(window).height() - $(".foot").height() - $(".head-simple").innerHeight();
     }
     $("main").height(mainHei);
   }
@@ -43,21 +42,37 @@ $(function(){
   $(".btn-edit").on("click",function(){
     $(".prof-info").addClass("edit");
     $(".prof-edit__event").addClass("edit");
+    $(".prof-info__name input").removeAttr("readonly");
+    $(".prof-info__text textarea").removeAttr("readonly");
   })
-
   $(".btn-cancel,.btn-preser").on("click",function(){
     $(".prof-info").removeClass("edit");
     $(".prof-edit__event").removeClass("edit");
+    $(".prof-info__name input").attr("readonly",true);
+    $(".prof-info__text textarea").attr("readonly", true);
   })
 
   // 投稿作品削除
   $(".btn-delete").on("click",function(){
     $(".btn-erasure").toggleClass("on");
   })
-  console.log($(".btn-erasure"))
 
   $(".btn-erasure").on("click",function(){
     $(this).parent("li").css("display","none");
-    console.log($(this))
   })
+
+
+  // URLでナビ変更
+  let url = location.pathname;
+  let page = url.split("/")[3].split(".")[0];
+  const pages = ["index","mypage","contact","setting"];
+  $.each(pages,function(i){
+    if (page == pages[i]) {
+      $(".menu-glnav__list").eq(i).addClass("on");
+    }
+  })
+  
+
+
+  
 });

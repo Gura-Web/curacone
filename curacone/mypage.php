@@ -18,8 +18,8 @@
           <div class="prof-info">
             <p class="prof-info__icon"><img src="img/icon-prof.png" alt=""></p>
             <div class="prof-text-wrap">
-              <p class="prof-info__name">三木 ケンケン</p>
-              <p class="prof-info__text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+              <p class="prof-info__name"><input type="text" value="三木 ケンケン" readonly></p>
+              <p class="prof-info__text"><textarea cols="20" rows="3" readonly>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</textarea></p>
             </div>
           </div>
           <div class="prof-edit">

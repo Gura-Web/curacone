@@ -29,7 +29,7 @@
 
   <nav class="menu__glnav">
     <ul>
-      <li class="menu-glnav__list on">
+      <li class="menu-glnav__list">
         <a href="index.php">
           <?php include("icon-home.html"); ?>
           <span>HOME</span>
