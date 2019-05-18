@@ -35,6 +35,9 @@ li{
 img{
   vertical-align: bottom;
 }
+input:focus {
+  outline: 0;
+}
 @media (max-width: 1280px){
   html{
     font-size: 50%;

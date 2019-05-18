@@ -28,6 +28,7 @@ $(function(){
   // footer常に下に
   let mainHei = "";
   if ($("main").height() < $(window).height()){
+    console.log()
     
     if ($(".head-simple").height() == undefined){
       mainHei = $(window).height() - $(".foot").height();
@@ -131,6 +132,14 @@ $(function(){
     "dragover": cancelEvent,
     "dragleave": cancelEvent,
     "drop": dropFileEvent
+  });
+
+
+  // コピー
+  $(".btn-copy").on('click', function () {
+    var copyArea = $('.copy-area');
+    copyArea.select();
+    document.execCommand('copy');
   });
 
   

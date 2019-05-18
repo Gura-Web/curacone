@@ -75,74 +75,7 @@
         </div>
       </div>
       
-      <ul class="workList">
-        <li class="work">
-          <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
-          <h3 class="work__title">タイポグラフィアートの作品</h3>
-          <div class="work__info">
-            <a class="work-info__prof" href="mypage.html">
-              <p class="icon icon-mini"><img src="img/icon-sample.png" alt="投稿者のアイコン"></p>
-              <span>前田 大地</span>
-            </a>
-            <p class="work-info__comment">2</p>
-          </div>
-        </li>
-        <li class="work">
-          <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
-          <h3 class="work__title">タイポグラフィアートの作品</h3>
-          <div class="work__info">
-            <a class="work-info__prof" href="mypage.html">
-              <p class="icon icon-mini"><img src="img/icon-sample.png" alt="投稿者のアイコン"></p>
-              <span>前田 大地</span>
-            </a>
-            <p class="work-info__comment">2</p>
-          </div>
-        </li>
-        <li class="work">
-          <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
-          <h3 class="work__title">タイポグラフィアートの作品</h3>
-          <div class="work__info">
-            <a class="work-info__prof" href="mypage.html">
-              <p class="icon icon-mini"><img src="img/icon-sample.png" alt="投稿者のアイコン"></p>
-              <span>前田 大地</span>
-            </a>
-            <p class="work-info__comment">2</p>
-          </div>
-        </li>
-        <li class="work">
-          <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
-          <h3 class="work__title">タイポグラフィアートの作品</h3>
-          <div class="work__info">
-            <a class="work-info__prof" href="mypage.html">
-              <p class="icon icon-mini"><img src="img/icon-sample.png" alt="投稿者のアイコン"></p>
-              <span>前田 大地</span>
-            </a>
-            <p class="work-info__comment">2</p>
-          </div>
-        </li>
-        <li class="work">
-          <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
-          <h3 class="work__title">タイポグラフィアートの作品</h3>
-          <div class="work__info">
-            <a class="work-info__prof" href="mypage.html">
-              <p class="icon icon-mini"><img src="img/icon-sample.png" alt="投稿者のアイコン"></p>
-              <span>前田 大地</span>
-            </a>
-            <p class="work-info__comment">2</p>
-          </div>
-        </li>
-        <li class="work">
-          <p class="work__thumb"><img src="img/img-sample.png" alt="作品のサムネイル"></p>
-          <h3 class="work__title">タイポグラフィアートの作品</h3>
-          <div class="work__info">
-            <a class="work-info__prof" href="mypage.html">
-              <p class="icon icon-mini"><img src="img/icon-sample.png" alt="投稿者のアイコン"></p>
-              <span>前田 大地</span>
-            </a>
-            <p class="work-info__comment">2</p>
-          </div>
-        </li>
-      </ul>
+      <ul class="workList"></ul>
       <button class="btn btn-view">viermore</button>
       <div class="btn-add">
         <a href="post.php">
@@ -154,6 +87,8 @@
         </a>
       </div>
     </main>
+
   <?php include("read/footer.php") ?>
+  
 </body>
 </html>
