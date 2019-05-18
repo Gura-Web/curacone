@@ -44,12 +44,18 @@ $(function(){
     $(".prof-edit__event").addClass("edit");
     $(".prof-info__name input").removeAttr("readonly");
     $(".prof-info__text textarea").removeAttr("readonly");
+    $("body").addClass("edit");
+    if($(window).width() <= 960){
+      $(this).css("opacity","0");
+    }
   })
   $(".btn-cancel,.btn-preser").on("click",function(){
     $(".prof-info").removeClass("edit");
     $(".prof-edit__event").removeClass("edit");
     $(".prof-info__name input").attr("readonly",true);
     $(".prof-info__text textarea").attr("readonly", true);
+    $("body").removeClass("edit");
+    $(".btn-edit").css("opacity", "1");
   })
 
   // 投稿作品削除
