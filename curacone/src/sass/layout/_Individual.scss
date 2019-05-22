@@ -68,9 +68,6 @@
 }
 .comment{
   &__list{
-    margin-bottom: 30px;
-    padding-bottom: 34px;
-    border-bottom: solid 1px $thin;
     font-size: 1.6rem;
     .comment-list__icon{
       height: 40px;
@@ -85,8 +82,20 @@
       }
     }
     .comment-list__text{
-      margin: 8px 0 0 20px;
-      color: $gray;
+      margin: 6px 0 26px 20px;
+      padding-bottom: 20px;
+      border-left: solid 1px #fff;
+      border-bottom: solid 1px $thin;
+      span{
+        display: block;
+        padding: 4px 0 0 32px;
+        color: $gray;
+      }
+      &.repOn{
+        margin-bottom: 0;
+        border-left: solid 1px $thin;
+        border-bottom: none;
+      }
     }
   }
 }
@@ -163,20 +172,43 @@
   }
 }
 .reply{
-  margin: 36px 0 0 68px;
   &__list{
     position: relative;
+    margin-left: 20px;
+    padding-left: 30px;
+    border-left: solid 1px $thin;
+    &:last-child{
+      border-left: none;
+      &::after{
+        display: block;
+        width: 19px;
+        height: 1px;
+        left: -9px;
+        top: 9px;
+        transform: rotate(90deg);
+        content: '';
+        position: absolute;
+        background: $thin;
+      }
+    }
     &::before{
       display: block;
-      width: 30px;
-      height: 28px;
+      width: 20px;
+      height: 1px;
+      left: 0;
+      top: 18px;
       content: '';
       position: absolute;
-      top: -6px;
-      left: -44px;
-      background-image: url("../img/icon-reply.svg");
+      background: $thin;
+    }
+    .comment-list__text{
+      margin-left: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+      color: $gray;
     }
   }
+  
 }
 
 // Mypage

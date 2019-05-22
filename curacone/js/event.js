@@ -10,8 +10,9 @@ $(function(){
   })
 
   // モーダル表示/非表示
-  $.each($(".work"),function(){
-    $(this).on("click",function(){
+  $.each($(".work"),function(i,e){
+    $(document).on("click",".work",function(){
+      console.log(e)
       if (!$(".btn-erasure").hasClass("on")){
         $(".modal-wrap").addClass("on");
         $(".foot").addClass("no");
@@ -20,7 +21,8 @@ $(function(){
     })
     
   })
-  $(".btn-modal-close").on("click",function(){
+  $(document).on("click",".btn-modal-close",function(){
+    console.log("bbb")
     $(".modal-wrap").removeClass("on");
     $(".foot").removeClass("no");
   })
