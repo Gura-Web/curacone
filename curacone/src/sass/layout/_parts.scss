@@ -226,4 +226,36 @@
 }
 
 
- 
+ // ホバー
+.btn--blue,
+.guest p,
+.logo,
+.btn-view,
+.btn-delete,
+.work,
+.btn-add__deco{
+  transition: ease 0.2s;
+}
+
+.btn--blue:hover{
+  background: #155DFF;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+}
+.guest p:hover,
+.logo:hover{
+  opacity: 0.5;
+}
+.btn-view:hover,
+.btn-delete:hover{
+  box-shadow: 0 9px 30px rgba(0,0,0,0.14);
+}
+.work:hover{
+  box-shadow: 0 9px 30px rgba(0,0,0,0.14);
+  bottom: 10px;
+}
+.btn-add:hover{
+  .btn-add__deco{
+    background: #155DFF;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+}

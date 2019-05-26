@@ -235,6 +235,7 @@
   }
 }
 .prof-text-wrap{
+  min-width: 200px;
   max-width: 300px;
   margin-right: 10px;
 }
@@ -318,6 +319,8 @@
     font-weight: bold;
     input{
       width: 100%;
+      text-align: center;
+
     }
   }
   &__text{
