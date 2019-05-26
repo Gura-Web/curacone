@@ -26,18 +26,8 @@ $(function(){
     $(".foot").removeClass("no");
   })
 
-  // footer常に下に
-  let mainHei = "";
-  if ($("main").height() < $(window).height()){
-    
-    if ($(".head-simple").height() == undefined){
-      mainHei = $(window).height() - $(".foot").height();
-    }
-    else{
-      mainHei = $(window).height() - $(".foot").height() - $(".head-simple").innerHeight();
-    }
-    $("main").height(mainHei);
-  }
+
+  
 
   // マイページ編集
   $(".btn-edit").on("click",function(){

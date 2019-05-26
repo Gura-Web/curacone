@@ -120,20 +120,25 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品1へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
+          comment_id: 2,
           write_name: "みき",
           write_text: "作品1へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
       ]
@@ -151,23 +156,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品2へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品2へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 3,
@@ -182,23 +191,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品3へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品3へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 4,
@@ -213,23 +226,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品4へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品4へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 5,
@@ -244,23 +261,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品5へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品5へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 6,
@@ -275,23 +296,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品6へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品6へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 7,
@@ -306,23 +331,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品7へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品7へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 8,
@@ -337,23 +366,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品8へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品8へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 9,
@@ -368,23 +401,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品9へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品9へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 10,
@@ -399,23 +436,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品10へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品10へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 11,
@@ -430,23 +471,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品11へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品11へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     },
     {
       id: 12,
@@ -461,23 +506,27 @@ $(function () {
         {
           write_name: "砂糖大地",
           write_text: "作品12へのコメント1",
+          write_icon: "img/icon-sample.png",
           reply: [
             {
-              write_name: "おぐら",
-              write_text: "コメント1への返信1"
+              reply_name: "おぐら",
+              reply_text: "コメント1への返信1",
+              reply_icon: "img/icon-sample.png"
             },
             {
-              write_name: "砂糖大地",
-              write_text: "コメント1への返信2"
+              reply_name: "砂糖大地",
+              reply_text: "コメント1への返信2",
+              reply_icon: "img/icon-sample.png"
             }
           ]
         },
         {
           write_name: "みき",
           write_text: "作品12へのコメント2",
+          write_icon: "img/icon-sample.png",
           reply: []
         }
-      ]
+      ]    
     }
   ]
 
@@ -510,14 +559,24 @@ $(function () {
     $(".workList").append(item);
   })
 
-    let mainHei = "";
-    if ($(".head-simple").height() == undefined) {
-      mainHei = $(window).height() - $(".foot").height();
+  // footer常に下に
+  let mainHei = "";
+
+  let footPos = function(){
+    if ($("main").height() < $(window).height()) {
+
+      if ($(".head-simple").height() == undefined) {
+        mainHei = $(window).height() - $(".foot").height();
+      }
+      else {
+        mainHei = $(window).height() - $(".foot").height() - $(".head-simple").innerHeight();
+      }
+      $("main").height(mainHei);
     }
-    else {
-      mainHei = $(window).height() - $(".foot").height() - $(".head-simple").innerHeight();
-    }
-    $("main").height(mainHei);
+  }
+
+  footPos();
+
 
   $(".work").on("click",function(){
     $(".modal").remove();
@@ -560,24 +619,6 @@ $(function () {
           <div class="modal__comment">
             <h4>みんなのコメント</h4>
             <ul class="comment">
-              <li class="comment__list">
-                <p class="comment-list__icon"><img src="img/icon-sample.png" alt=""><span>砂糖 大地</span></p>
-                <p class="comment-list__text"><span>聖書第１章、 はじめに神は天と地とを創造された。 2 地は形なく、むなしく、やみが淵のおもてにあり、神の霊が水のおもてをおおっていた。</span></p>
-              </li>
-              <li class="comment__list">
-                <p class="comment-list__icon"><img src="img/icon-sample.png" alt=""><span>砂糖 大地</span></p>
-                <p class="comment-list__text repOn"><span>聖書第１章、 はじめに神は天と地とを創造された。 2 地は形なく、むなしく、やみが淵のおもてにあり、神の霊が水のおもてをおおっていた。</span></p>
-                <ul class="reply">
-                  <li class="reply__list">
-                    <p class="comment-list__icon"><img src="img/icon-sample.png" alt=""><span>砂糖 大地</span></p>
-                    <p class="comment-list__text">聖書第１章、 はじめに神は天と地とを創造された。 2 地は形なく、むなしく、やみが淵のおもてにあり、神の霊が水のおもてをおおっていた。</p>
-                  </li>
-                  <li class="reply__list">
-                    <p class="comment-list__icon"><img src="img/icon-sample.png" alt=""><span>砂糖 大地</span></p>
-                    <p class="comment-list__text">聖書第１章、 はじめに神は天と地とを創造された。 2 地は形なく、むなしく、やみが淵のおもてにあり、神の霊が水のおもてをおおっていた。</p>
-                  </li>
-                </ul>
-              </li>
             </ul>
             <div class="comment-submit">
               <h5 class="comment-submit__title">コメントをしてみよう！</h5>
@@ -587,10 +628,36 @@ $(function () {
         </div>
     `;
     $(".modal-wrap").append(item);
+
+    // コメントappend
+    $.each(work.comment,function(i,e){
+      let item_comennt = `
+        <li class="comment__list">
+          <p class="comment-list__icon"><img src="${e.write_icon}" alt=""><span>${e.write_name}</span></p>
+          <p class="comment-list__text"><span>${e.write_text}</span></p>
+          <ul class="reply"></ul>
+        </li>
+      `;
+
+      $(".comment").append(item_comennt);
+      // 返信があった場合はクラス名repOnを付与し、返信コメントをappend
+      if (!e.reply.length == 0){
+        $(".comment__list").eq(i).children(".comment-list__text").addClass("repOn");
+        $.each(e.reply, function (k, v) {
+          let item_reply = `
+          <li class="reply__list">
+            <p class="comment-list__icon"><img src="${v.reply_icon}" alt=""><span>${v.reply_name}</span></p>
+            <p class="comment-list__text">${v.reply_text}</p>
+          </li>
+        `;
+          $(".reply").append(item_reply);
+        })
+      }
+    })
   })
 
-    
-  // })
+          
+        // })
   // .fail(function(){
   //   console.log("error")
   // })
