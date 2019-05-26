@@ -12,17 +12,16 @@ $(function(){
   // モーダル表示/非表示
   $.each($(".work"),function(i,e){
     $(document).on("click",".work",function(){
-      console.log(e)
       if (!$(".btn-erasure").hasClass("on")){
         $(".modal-wrap").addClass("on");
         $(".foot").addClass("no");
+        
       }
       
     })
     
   })
   $(document).on("click",".btn-modal-close",function(){
-    console.log("bbb")
     $(".modal-wrap").removeClass("on");
     $(".foot").removeClass("no");
   })
@@ -30,7 +29,6 @@ $(function(){
   // footer常に下に
   let mainHei = "";
   if ($("main").height() < $(window).height()){
-    console.log()
     
     if ($(".head-simple").height() == undefined){
       mainHei = $(window).height() - $(".foot").height();
