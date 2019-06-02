@@ -55,7 +55,7 @@
       </li>
     </ul>
   </nav>
-  <button class="btn menu__logout">
+  <button class="btn menu__logout btn-logout">
     <img src="img/icon-logout.svg" alt="">ログアウト
   </button>
 </div>

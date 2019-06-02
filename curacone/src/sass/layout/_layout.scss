@@ -27,11 +27,6 @@
     left: 50%;
     bottom: 60px;
     transform: translateX(-50%);
-    color: $light;
-    font-size: 1.4rem;
-    img{
-      margin-right: 8px;
-    }
   }
   &.on{
     opacity: 1;
