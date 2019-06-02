@@ -184,6 +184,24 @@
   }
 }
 
+// コメント返信ボタン
+.btn-reply{
+  color: $blue;
+  font-size: 1.4rem;
+}
+
+// コメント送信ボタン
+.btn-submit{
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: $thin;
+  color: $gray;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+
 
 
 // mypage

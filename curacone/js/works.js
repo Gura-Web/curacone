@@ -622,7 +622,11 @@ $(function () {
             </ul>
             <div class="comment-submit">
               <h5 class="comment-submit__title">コメントをしてみよう！</h5>
-              <p class="comment-submit__bar"><img src="img/icon-sample.png" alt=""><input type="text" placeholder="作品に対しての感想など..."></p>
+              <p class="comment-submit__bar">
+                <img src="img/icon-sample.png" alt="">
+                <input type="text" placeholder="作品に対しての感想など...">
+                <buttton class="btn-submit">送信</button>
+              </p>
             </div>
           </div>
         </div>
@@ -635,6 +639,7 @@ $(function () {
         <li class="comment__list">
           <p class="comment-list__icon"><img src="${e.write_icon}" alt=""><span>${e.write_name}</span></p>
           <p class="comment-list__text"><span>${e.write_text}</span></p>
+          <div class="comment-list__btn"><button class="btn-reply">返信する</button></div>
           <ul class="reply"></ul>
         </li>
       `;
@@ -648,6 +653,7 @@ $(function () {
           <li class="reply__list">
             <p class="comment-list__icon"><img src="${v.reply_icon}" alt=""><span>${v.reply_name}</span></p>
             <p class="comment-list__text">${v.reply_text}</p>
+            <div class="comment-list__btn"><button class="btn-reply">返信する</button></div>
           </li>
         `;
           $(".reply").append(item_reply);

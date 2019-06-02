@@ -82,8 +82,8 @@
       }
     }
     .comment-list__text{
-      margin: 6px 0 26px 20px;
-      padding-bottom: 20px;
+      margin: 6px 0 0 20px;
+      padding-bottom: 36px;
       border-left: solid 1px #fff;
       border-bottom: solid 1px $thin;
       span{
@@ -95,6 +95,14 @@
         margin-bottom: 0;
         border-left: solid 1px $thin;
         border-bottom: none;
+      }
+    }
+    .comment-list__btn{
+      position: relative;
+      button{
+        position: absolute;
+        right: 0;
+        bottom: 24px;
       }
     }
   }
@@ -148,6 +156,7 @@
   }
 }
 .comment-submit{
+  margin-top: 30px;
   padding-bottom: 34px;
   &__title{
     margin-bottom: 16px;
@@ -163,7 +172,7 @@
     border-radius: 0.5rem;
     font-size: 1.6rem;
     input{
-      width: 100%;
+      width: calc(100% - 70px);
       margin-left: 28px;
     }
     img{
