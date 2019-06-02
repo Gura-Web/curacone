@@ -15,15 +15,14 @@ $(function(){
       if (!$(".btn-erasure").hasClass("on")){
         $(".modal-wrap").addClass("on");
         $(".foot").addClass("no");
-        
+        $(".workList").addClass("no");
       }
-      
     })
-    
   })
   $(document).on("click",".btn-modal-close",function(){
     $(".modal-wrap").removeClass("on");
     $(".foot").removeClass("no");
+    $(".workList").removeClass("no");
   })
 
 

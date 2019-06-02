@@ -85,8 +85,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: auto;
   max-width: 68%;
   margin: 0 auto;
+  &.no{
+    height: 0;
+  }
 }
 .workList .work{
   width: 30%;
