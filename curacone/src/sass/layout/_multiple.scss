@@ -16,7 +16,7 @@
   margin: 0 auto;
   position: relative;
   &__head{
-    padding-top: 166px;
+    padding-top: 120px;
     font-size: 6rem;
     font-family: $mplus;
     line-height: 1;
@@ -46,7 +46,7 @@
   }
   &__img{
     position: absolute;
-    top: 250px;
+    top: 204px;
     right: 97px;
   }
 }
@@ -59,14 +59,14 @@
       padding: 10px 16px; 
     }
     &__img{
-      top: 228px;
+      top: 180px;
     }
   }
 }
 @media (max-width: 960px){
   .work-search__img{
     width: 110px;
-    top: 244px;
+    top: 196px;
     right: 30px;
   }
 }
