@@ -615,7 +615,10 @@
 
 // sign
 .head-simple{
-  padding: 56px 0 0 60px;
+  display: flex;
+  align-items: flex-end;
+  height: 100px;
+  margin-left: 60px;
 }
 .sign-wrap{
   max-width: 1280px;

@@ -561,17 +561,27 @@ $(function () {
 
   // footer常に下に
   let mainHei = "";
-  
+
   let footPos = function(){
     if ($("main").height() < $(window).height()) {
       if ($(".head-sp").css("display") == "none") {
         mainHei = $(window).height() - $(".foot").height();
+        $("body").height(mainHei);
+        $("main").height(mainHei);
       }
       else {
-        mainHei = $(window).height() - $(".foot").height() - $(".head-sp").innerHeight();
+        
+        // メニューがないページ
+        if ($(".head-simple")){
+          mainHei = $(window).height() - $(".head-simple").height() - $(".foot").height();
+          $("main").height(mainHei);
+        }
+        else{
+          mainHei = $(window).height() - $(".foot").height() - $(".head-sp").innerHeight();
+          $("body").height(mainHei);
+          $("main").height(mainHei);
+        }
       }
-      $("main").height(mainHei);
-      $("body").height(mainHei);
     }
   }
   footPos();
