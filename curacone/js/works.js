@@ -561,22 +561,20 @@ $(function () {
 
   // footer常に下に
   let mainHei = "";
-
+  
   let footPos = function(){
     if ($("main").height() < $(window).height()) {
-
-      if ($(".head-simple").height() == undefined) {
+      if ($(".head-sp").css("display") == "none") {
         mainHei = $(window).height() - $(".foot").height();
       }
       else {
-        mainHei = $(window).height() - $(".foot").height() - $(".head-simple").innerHeight();
+        mainHei = $(window).height() - $(".foot").height() - $(".head-sp").innerHeight();
       }
       $("main").height(mainHei);
+      $("body").height(mainHei);
     }
   }
-
   footPos();
-
 
   $(".work").on("click",function(){
     $(".modal").remove();
