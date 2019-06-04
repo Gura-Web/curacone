@@ -27,7 +27,7 @@
       </div>
       
       <ul class="workList"></ul>
-      <button class="btn btn-view">viermore</button>
+      <button class="btn btn-view">viewmore</button>
       <div class="btn-add">
         <a href="post.php">
           <div class="btn-add__deco">

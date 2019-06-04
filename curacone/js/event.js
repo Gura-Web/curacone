@@ -131,5 +131,13 @@ $(function(){
     document.execCommand('copy');
   });
 
-  
+
+  // 会員登録とログイン切り替え
+  let pageNow = location.href.split("=")[1];
+  if (pageNow == 'up'){
+    $(".btn-signUp").addClass("on");
+  }
+  if (pageNow == 'in'){
+    $(".btn-signIn").addClass("on");
+  }
 });

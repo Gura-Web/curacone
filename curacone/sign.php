@@ -14,8 +14,8 @@
   <main class="sign-wrap">
     <div class="sign">
       <div class="sign__change">
-        <p><a href="sign.php?type=in" class="btn-signIn changeFlg on"><span>SIGN</span>&nbsp;IN</a></p>
-        <p><a href="sign.php?type=up" class="btn-signup changeFlg"><span>SIGN</span>&nbsp;UP</a></p>
+        <p><a href="sign.php?type=in" class="btn-signIn changeFlg"><span>SIGN</span>&nbsp;IN</a></p>
+        <p><a href="sign.php?type=up" class="btn-signUp changeFlg"><span>SIGN</span>&nbsp;UP</a></p>
       </div>
 
       <form action="" class="sign__form">

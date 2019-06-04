@@ -545,6 +545,7 @@ $(function () {
   $.each(works,function(i,e){
 
     let item = `<li class="work" data-work-id="${works[i].id}">
+      <button class="work__btn btn-erasure"></button>
       <p class="work__thumb"><img src="${works[i].work_thumb}" alt="作品のサムネイル"></p>
         <h3 class="work__title">${works[i].work_title}</h3>
         <div class="work__info">
