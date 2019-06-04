@@ -8,8 +8,8 @@
 
 @mixin closeBtn($width,$height,$back) {
   position: absolute;
-  top: 40px;
-  right: 60px;
+  top: 23px;
+  right: 34px;
   &::before,
   &::after{
     display: block;
