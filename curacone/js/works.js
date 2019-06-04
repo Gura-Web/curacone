@@ -570,9 +570,8 @@ $(function () {
         $("main").height(mainHei);
       }
       else {
-        
         // メニューがないページ
-        if ($(".head-simple")){
+        if (!$(".head-simple").length == 0){
           mainHei = $(window).height() - $(".head-simple").height() - $(".foot").height();
           $("main").height(mainHei);
         }
