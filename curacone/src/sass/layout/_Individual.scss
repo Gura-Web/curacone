@@ -232,7 +232,7 @@
   background-image: url("../img/bg.svg");
   background-repeat: no-repeat;
   background-size: 720px;
-  background-position: right -190px top -300px;
+  background-position: left;
   &::before{
     display: block;
     content: '';
@@ -673,7 +673,7 @@
 .sign{
   width: 464px;
   max-height: 546px;
-  margin: 100px 0 0 4%;
+  margin: 60px 0 0 4%;
   padding: 0 50px;
   box-shadow: 6px 6px 30px rgba(000,000,000,0.04);
   border-radius: 1.4rem;
@@ -688,17 +688,17 @@
 @media( max-width: 960px ){
   .sign{
     margin-left: 0;
+    &__change {
+      margin: 30px 0 44px;
+    }
   }
   .btn-signup::before{
-    top: 92px;
+    top: 32px;
   }
 }
 @media( max-width: 600px ){
   .sign{
     width: 420px;
-  }
-  .btn-signup::before{
-    top: 90px;
   }
 }
 @media( max-width: 480px ){

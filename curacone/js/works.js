@@ -573,13 +573,13 @@ $(function () {
       else {
         // メニューがないページ
         if (!$(".head-simple").length == 0){
-          mainHei = $(window).height() - $(".head-simple").height() - $(".foot").height();
-          $("main").height(mainHei);
+          // mainHei = $(window).height() - $(".head-simple").height() - $(".foot").height();
+          // $("main").height(mainHei);
         }
         else{
-          mainHei = $(window).height() - $(".foot").height() - $(".head-sp").innerHeight();
-          $("body").height(mainHei);
-          $("main").height(mainHei);
+          // mainHei = $(window).height() - $(".foot").height() - $(".head-sp").innerHeight();
+          // $("body").height(mainHei);
+          // $("main").height(mainHei);
         }
       }
     }

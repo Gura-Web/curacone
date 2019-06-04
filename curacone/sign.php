@@ -36,6 +36,10 @@
       <img src="img/deco-sign.svg" alt="">
     </div>
   </main>
-  <?php include("read/footer.php") ?>
+  <footer class="foot foot-sign">&copy; 2019 curacone.</footer>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/works.js"></script>
+  <script src="js/event.js"></script>
+
 </body>
 </html>
