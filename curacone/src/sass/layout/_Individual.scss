@@ -685,6 +685,31 @@
     text-align: center;
   }
 }
+@media( max-width: 960px ){
+  .sign{
+    margin-left: 0;
+  }
+  .btn-signup::before{
+    top: 92px;
+  }
+}
+@media( max-width: 600px ){
+  .sign{
+    width: 420px;
+  }
+  .btn-signup::before{
+    top: 90px;
+  }
+}
+@media( max-width: 480px ){
+  .sign{
+    width: 300px;
+  }
+  .btn-signup::before{
+    height: 32px;
+    top: 88px;
+  }
+}
 .form-content{
   width: 100%;
   margin: 0 auto;
