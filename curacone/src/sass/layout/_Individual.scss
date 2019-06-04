@@ -328,8 +328,7 @@
     font-weight: bold;
     input{
       width: 100%;
-      text-align: center;
-
+      text-align: left;
     }
   }
   &__text{
@@ -338,6 +337,11 @@
     textarea{
       width: 100%;
     }
+  }
+}
+@media ( max-width: 960px ){
+  .prof-info__name input{
+    text-align: center;
   }
 }
 .prof-edit{
@@ -537,6 +541,7 @@
     content: '';
     width: 200px;
     height: 200px;
+    background-size: 100%;
     top: 260px;
     left: calc(50% + 38px);
     position: absolute;
@@ -553,10 +558,41 @@
     height: 34px;
   }
   .contact::before{
-    left: calc(50% - 100px);
-    top: 316px;
+    width: 140px;
+    height: 140px;
+    left: calc(50% - 70px);
+    top: 282px;
   }
 }
+@media ( max-width: 600px ){
+  .contact{
+    width: 420px;
+  }
+  .contact-mail__box{
+    width: 360px;
+  }
+}
+@media ( max-width: 480px ){
+  .contact{
+    width: 300px;
+    &::before{
+      width: 120px;
+      height: 120px;
+      left: calc(50% - 62px);
+      top: 228px;
+    }
+  }
+  .contact-mail {
+    padding-top: 90px;
+    &__box{
+      width: 240px;
+    }
+  }
+  .copy-area{
+    padding-right: 40px;
+  }
+}
+
 .contact-mail{
   margin-top: 100px;
   padding-top: 140px;
@@ -584,7 +620,7 @@
       justify-content: center;
       align-items: center;
       width: 41px;
-      height: 41px;
+      height: 100%;
       position: absolute;
       right: 0;
       border-radius: 0 0.3rem 0.3rem 0;
@@ -593,8 +629,14 @@
   }
 }
 @media (max-width: 1280px){
-  .contact-mail__box .btn-copy{
-    height: 35px;
+  .contact-mail{
+    padding-top: 100px;
+  }
+  .contact::before{
+    width: 160px;
+    height: 160px;
+    left: calc(50% + 56px);
+    top: 236px;
   }
 }
 .copy-area{
@@ -603,7 +645,7 @@
 }
 
 .contact-twitter{
-  padding: 50px 0;
+  padding: 10% 0;
   &__head{
     margin-bottom: 10px;
     font-size: 2.2rem;
