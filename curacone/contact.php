@@ -20,7 +20,7 @@
       <div class="contact-mail">
         <h3 class="contact-mail__head">メールアドレス</h3>
         <div class="contact-mail__box">
-          <p>samplesamplesample@gmail.com</p>
+          <p><input class="copy-area" type="text" value="samplesamplesample@gmail.com"></p>
           <button class="btn-copy"><img src="img/icon-copy.svg" alt="メールアドレスコピーボタン"></button>
         </div>
       </div>

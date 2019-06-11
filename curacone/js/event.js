@@ -10,33 +10,23 @@ $(function(){
   })
 
   // モーダル表示/非表示
-  $.each($(".work"),function(){
-    $(this).on("click",function(){
+  $.each($(".work"),function(i,e){
+    $(document).on("click",".work",function(){
       if (!$(".btn-erasure").hasClass("on")){
         $(".modal-wrap").addClass("on");
         $(".foot").addClass("no");
+        $(".workList").addClass("no");
       }
-      
     })
-    
   })
-  $(".btn-modal-close").on("click",function(){
+  $(document).on("click",".btn-modal-close",function(){
     $(".modal-wrap").removeClass("on");
     $(".foot").removeClass("no");
+    $(".workList").removeClass("no");
   })
 
-  // footer常に下に
-  let mainHei = "";
-  if ($("main").height() < $(window).height()){
-    
-    if ($(".head-simple").height() == undefined){
-      mainHei = $(window).height() - $(".foot").height();
-    }
-    else{
-      mainHei = $(window).height() - $(".foot").height() - $(".head-simple").innerHeight();
-    }
-    $("main").height(mainHei);
-  }
+
+  
 
   // マイページ編集
   $(".btn-edit").on("click",function(){
@@ -44,12 +34,18 @@ $(function(){
     $(".prof-edit__event").addClass("edit");
     $(".prof-info__name input").removeAttr("readonly");
     $(".prof-info__text textarea").removeAttr("readonly");
+    $("body").addClass("edit");
+    if($(window).width() <= 960){
+      $(this).css("opacity","0");
+    }
   })
   $(".btn-cancel,.btn-preser").on("click",function(){
     $(".prof-info").removeClass("edit");
     $(".prof-edit__event").removeClass("edit");
     $(".prof-info__name input").attr("readonly",true);
     $(".prof-info__text textarea").attr("readonly", true);
+    $("body").removeClass("edit");
+    $(".btn-edit").css("opacity", "1");
   })
 
   // 投稿作品削除
@@ -127,5 +123,21 @@ $(function(){
     "drop": dropFileEvent
   });
 
-  
+
+  // コピー
+  $(".btn-copy").on('click', function () {
+    var copyArea = $('.copy-area');
+    copyArea.select();
+    document.execCommand('copy');
+  });
+
+
+  // 会員登録とログイン切り替え
+  let pageNow = location.href.split("=")[1];
+  if (pageNow == 'up'){
+    $(".btn-signUp").addClass("on");
+  }
+  if (pageNow == 'in'){
+    $(".btn-signIn").addClass("on");
+  }
 });

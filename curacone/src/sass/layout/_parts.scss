@@ -146,18 +146,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 116px;
-    height: 116px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto;
     border-radius: 50%;
     background: $blue;
     box-shadow: 0 6px 10px rgba(0,0,0,0.1);
     span{
       display: block;
-      width: 50%;
-      height: 4px;
+      width: 38%;
+      height: 6px;
+      border-radius: 20px;
       background: #fff;
       position: absolute;
+      @media screen and(max-width: 500px) {
+          width: 50%;
+      }
       &:last-child{
         transform: rotate(90deg);
       }
@@ -184,7 +188,32 @@
   }
 }
 
+// コメント返信ボタン
+.btn-reply{
+  color: $blue;
+  font-size: 1.4rem;
+}
 
+// コメント送信ボタン
+.btn-submit{
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: $thin;
+  color: $gray;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+
+.btn-logout{
+  color: $gray;
+  font-size: 1.4rem;
+  img{
+    opacity: 0.8;
+    margin-right: 8px;
+  }
+}
 
 // mypage
 .btn-delete{
@@ -226,4 +255,44 @@
 }
 
 
- 
+ // ホバー
+.btn--blue,
+.guest p,
+.logo,
+.btn-view,
+.btn-delete,
+.work,
+.btn-add__deco,
+.btn-logout,
+.btn-logout img{
+  transition: ease 0.2s;
+}
+
+.btn--blue:hover{
+  background: #155DFF;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+}
+.guest p:hover,
+.logo:hover{
+  opacity: 0.5;
+}
+.btn-view:hover,
+.btn-delete:hover{
+  box-shadow: 0 9px 30px rgba(0,0,0,0.14);
+}
+.workList .work:hover{
+  box-shadow: 0 9px 30px rgba(0,0,0,0.14);
+  bottom: 10px;
+}
+.btn-add:hover{
+  .btn-add__deco{
+    background: #155DFF;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+}
+.btn-logout:hover{
+  color: $black;
+  img{
+    opacity: 1;
+  }
+}
