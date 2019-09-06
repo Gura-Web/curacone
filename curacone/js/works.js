@@ -569,6 +569,7 @@ $(function () {
         mainHei = $(window).height() - $(".foot").height();
         $("body").height(mainHei);
         $("main").height(mainHei);
+        $(".foot").css("margin", "0 0 0 auto");
       }
       else {
         // メニューがないページ
